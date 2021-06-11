@@ -11,9 +11,52 @@ body .dct-nav {
   color: #FFFFFF !important;
 }
 
+body .dct-nav .dct-menu {
+  width: 50px;
+  height: 50px;
+}
+
+body .dct-nav .dct-link {
+  text-align: center;
+  margin: 0 5px;
+  background-color: #DC8886;
+  border: #FFFFFF 3px solid;
+  border-radius: 10px;
+}
+
+@media (max-width: 992px) {
+  body .dct-nav .dct-link {
+    border-radius: 0px;
+  }
+}
+
+body .dct-nav .dct-link:hover {
+  text-align: center;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+  background-color: #FFFFFF;
+  border: #DC8886 3px solid;
+  color: #DC8886;
+  border-radius: 10px;
+}
+
+@media (max-width: 992px) {
+  body .dct-nav .dct-link:hover {
+    border-radius: 0px;
+  }
+}
+
+body header .dct-video {
+  width: 100%;
+  height: 100%;
+}
+
 body .dct-footer {
   background-color: #F2CBBF;
-  color: #FFFFFF;
+}
+
+body .dct-footer .dct-copyright {
+  color: #607495;
 }
 
 a {
