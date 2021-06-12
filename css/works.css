@@ -3,6 +3,8 @@ body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none; width: 31.3333333333%; float: left;margin: 1%;}
 img {vertical-align: middle;}
 
+img:hover{cursor: pointer;}
+
 .slideshow-container {
   max-width: 72%;
   position: relative;
