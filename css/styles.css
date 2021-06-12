@@ -3985,7 +3985,8 @@ input[type=button].btn-block {
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
-  background:url(https://fakeimg.pl/150x30/) no-repeat;
+  /* background-color: #000; */
+  background:url(https://fakeimg.pl/465x50/?text=COVID-19-FUKC) no-repeat;
   /* background:url(../img/phonesize-icon.png) no-repeat;  */
   overflow: hidden;
   text-indent: 101%;
@@ -10378,7 +10379,7 @@ header.masthead .post-heading .meta a {
   }
 }
 
-/* img{
+img{
   max-width: 100%;
   height: auto;
-} */
+}

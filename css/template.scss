@@ -33,6 +33,32 @@ body{
                 }
             }
         }
+        .dct-icon{
+
+            width: 50%;
+            @media (max-width: 991.98px){
+                width: 86%;
+            }
+            @media (max-width: 767.98px){
+                width: 80%;
+            }
+            @media (max-width: 575.98px){
+                
+                width: 72%;
+            }
+     
+            @media (max-width: 375.98px){
+                width: 66%;
+            }
+            @media (max-width: 320.98px){
+                width: 66%;
+            }
+
+            
+            
+
+
+        }
         
     }
     header{
@@ -47,7 +73,7 @@ body{
             color:#607495;
         }
     }
-}
-a{
-    color: currentColor;
+    a{
+        color: currentColor;
+    }
 }
