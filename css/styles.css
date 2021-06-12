@@ -3978,13 +3978,18 @@ input[type=button].btn-block {
   justify-content: space-between;
 }
 .navbar-brand {
-  display: inline-block;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
-  margin-right: 1rem;
-  font-size: 1.25rem;
+  display: block;
+  /* padding-top: 0.3125rem; */
+  /* padding-bottom: 0.3125rem; */
+  /* margin-right: 1rem; */
+  /* font-size: 1.25rem; */
   line-height: inherit;
   white-space: nowrap;
+  background:url(https://fakeimg.pl/120x30/) no-repeat;
+  /* background:url(../img/phonesize-icon.png) no-repeat; */
+  overflow: hidden;
+  text-indent: 101%;
+
 }
 .navbar-brand:hover, .navbar-brand:focus {
   text-decoration: none;
@@ -10239,14 +10244,14 @@ form .form-group:first-child .floating-label-form-group {
 }
 
 footer {
-  padding: 50px 0 65px;
+  padding: 50px 0 35px;
 }
 footer .list-inline {
   margin: 0;
   padding: 0;
 }
 footer .copyright {
-  font-size: 14px;
+  font-size: 12px;
   margin-bottom: 0;
   text-align: center;
 }
