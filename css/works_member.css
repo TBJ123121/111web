@@ -10,6 +10,10 @@ img {vertical-align: middle;border:0px solid;border-radius: 50%;}
   background-color: black;
 }
 
+.subTitleText{
+  font-size:large;
+}
+
 .memberIntro{
   margin-top: 10%;
 }
@@ -40,6 +44,11 @@ img {vertical-align: middle;border:0px solid;border-radius: 50%;}
   max-width: 72%;
   position: relative;
   margin-top: 10%;
+  margin-bottom: 5%;
+}
+.subTitle{
+  max-width: 20%;
+  position: relative;
   margin-bottom: 5%;
 }
 

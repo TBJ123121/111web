@@ -3,11 +3,11 @@ var w;
 
 window.onload = function(){
     watchChangeSize();
-    //showSlides(page);
+    showSlides(page);
 }
 window.onresize=function(){  
     watchChangeSize();
-    //showSlides(page);
+    showSlides(page);
 }
 
 function watchChangeSize (){    
@@ -17,7 +17,33 @@ function watchChangeSize (){
 function showSlides(page){
   father = document.getElementById("slideshow-container");
   father.innerHTML = "";
-  if(w > 768){
+  <?php
+    $id = $_GET["id"];
+    echo'console('.$_SERVER["QUERY_STRING"].');';
+    $conn = new PDO("mysql:host=localhost;dbname=projectintro","root","");
+    $stmt = $conn->prepare("SELECT * FROM member WHERE groupId = '".$id."'");
+    $stmt->execute();
+    echo'if(w > 768){console.log(w);switch(page){';
+    $rows = $stmt->fetchAll();
+    for ($num = 1; $num <= count($rows) ; ++$num){
+        echo'case '.$num.':father.innerHTML =';
+        for($i = $num; $i<=$num+2 ; ++$i){
+            if($i-count($rows) > 0){
+              $temp = $i-count($rows);
+              echo'"<div class="mySlides" id="'.$temp.'" style="display:block;">"+'.
+              '"<img src="./assets/teamMember/team'.$row[$temp-1]['groupId'].'/'.$temp.'.jpg" style="width:100%"/>"+"</div>"+';
+            }else{
+              echo'"<div class="mySlides" id="'.$i.'" style="display:block;">"+'.
+              '"<img src="./assets/teamMember/team'.$row[$i-1]['groupId'].'/'.$i.'.jpg" style="width:100%"/>"+"</div>"+';
+            }
+        }
+        echo'break;';
+    }
+    echo'}}';
+  ?>
+  
+
+  /*if(w > 768){
       console.log(w);
       switch(page){
         case 1:
@@ -245,11 +271,19 @@ function showSlides(page){
 
             break;  
         }
-  }
+  }*/
 
 }
+<?php
+echo'function showPlusSlides() {';
+echo'++page;if(page > '.count($rows).'){page = 1;}showSlides(page);}';
+echo'}';
+echo'function showReduceSlides() {';
+echo'--page;if(page < 1){page = '.count($rows).';}showSlides(page);}';
+echo'}';
+?>
 
-function showPlusSlides() {
+/*function showPlusSlides() {
   ++page;
   if(page > 11){
     page = 1;
@@ -263,4 +297,4 @@ function showReduceSlides() {
     page = 11;
   }
   showSlides(page);
-}
+}*/
