@@ -3979,15 +3979,16 @@ input[type=button].btn-block {
 }
 .navbar-brand {
   display: block;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
+  /* padding-top: 0.3125rem; */
+  /* padding-bottom: 0.3125rem; */
   margin-right: 1rem;
-  font-size: 1.25rem;
-  line-height: inherit;
+  /* font-size: 1.25rem; */
+  /* line-height: inherit; */
   white-space: nowrap;
-  /* background-color: #000; */
-  background:url(https://fakeimg.pl/465x50/?text=COVID-19-FUKC) no-repeat;
-  /* background:url(../img/phonesize-icon.png) no-repeat;  */
+  background-color: #000;
+  width:80px;
+  height:60px;
+  background:url(../img/40-30@1x.png) no-repeat;
   overflow: hidden;
   text-indent: 101%;
 

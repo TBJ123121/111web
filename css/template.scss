@@ -18,7 +18,7 @@ body{
             background-color: #DC8886;
             border: #FFFFFF 3px solid;
             border-radius: 10px;
-            @media (max-width:992px) {
+            @media (max-width:991.98px) {
                 border-radius: 0px;
             }
             &:hover{
@@ -28,7 +28,7 @@ body{
                 border: #DC8886 3px solid;
                 color: #DC8886;
                 border-radius: 10px;
-                @media (max-width:992px) {
+                @media (max-width:991.98px) {
                     border-radius: 0px;
                 }
             }
