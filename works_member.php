@@ -148,6 +148,8 @@
                                             $temp = $i-count($rows);
                                             echo'\''.'<div class="mySlides" id="'.$temp.'" style="display:block;">'.'\''.'+'.
                                             '\''.'<img src="./assets/teamMember/team'.$rows[$temp-1]["groupId"].'/'.$temp.'.jpg" style="width:100%"/>'.'\''.'+'.
+                                            '\''.'<div class="memberIntro"><p class="name">'.$rows[$temp-1]["name"].'</p></div>'.'\''.'+'.
+                                            '\''.'<div class="memberIntro"><p class="nameIntro">'.$rows[$temp-1]["mIntro"].'</p></div>'.'\''.'+'.
                                             '\''.'</div>'.'\'';
                                             if($i - $num < 2){
                                                 echo'+';
@@ -157,6 +159,8 @@
                                         }else{
                                             echo'\''.'<div class="mySlides" id="'.$i.'" style="display:block;">'.'\''.'+'.
                                             '\''.'<img src="./assets/teamMember/team'.$rows[$i-1]["groupId"].'/'.$i.'.jpg" style="width:100%"/>'.'\''.'+'.
+                                            '\''.'<div class="memberIntro"><p class="name">'.$rows[$i-1]["name"].'</p></div>'.'\''.'+'.
+                                            '\''.'<div class="memberIntro"><p class="nameIntro">'.$rows[$i-1]["mIntro"].'</p></div>'.'\''.'+'.
                                             '\''.'</div>'.'\'';
                                             if($i <= $num+1){
                                                 echo'+';
@@ -166,9 +170,6 @@
                                         }
                                     }
                                     echo'break;';
-                                    /*if($num < count($rows)){
-                                        echo'+';
-                                    }*/
                                 }
                             echo'}}';
                         echo'else if(w <= 768){console.log(w);switch(page){';
@@ -176,6 +177,8 @@
                             echo'case '.$num.':father.innerHTML =';
                             echo'\''.'<div class="mySlides" id="'.$num.'" style="display:block;">'.'\''.'+'.
                             '\''.'<img src="./assets/teamMember/team'.$rows[$num-1]["groupId"].'/'.$num.'.jpg" style="width:100%"/>'.'\''.'+'.
+                            '\''.'<div class="memberIntro"><p class="name">'.$rows[$num-1]["name"].'</p></div>'.'\''.'+'.
+                            '\''.'<div class="memberIntro"><p class="nameIntro">'.$rows[$num-1]["mIntro"].'</p></div>'.'\''.'+'.
                             '\''.'</div>'.'\'';
                             echo';';
                             echo'break;';

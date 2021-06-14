@@ -68,10 +68,22 @@ img {vertical-align: middle;border:0px solid;border-radius: 50%;}
   font-size: 30px;
  }
 
+ p.name{
+   font-weight: bold;
+   margin:auto;
+   text-align: center;
+ }
+
+ p.nameIntro{
+  margin:auto;
+  font-size: 25px;
+  text-align: center;
+}
+
 .prev, .next {
   cursor: pointer;
   position: relative;
-  top: 10%;
+  top: 5%;
   max-width: 14%
   padding: 16px;
   color: aliceblue;
