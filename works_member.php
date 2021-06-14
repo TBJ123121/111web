@@ -17,7 +17,42 @@
         <link href="css/works.css" rel="stylesheet" >
         <link href="./css/template.css" rel="stylesheet" />
         <link href="./css/works_member.css" rel="stylesheet" />
-        <script src="js/showGroup.js"></script>
+        <!--script src="js/showGroup.js"></script-->
+        <!--?php
+            $id = $_REQUEST["id"];
+            $conn = new PDO("mysql:host=localhost;dbname=projectintro","root","");
+            $conn->exec("SET NAMES 'utf8';");
+            $stmt = $conn->prepare("SELECT * FROM member WHERE groupId = '".$id."'");
+            $stmt->execute();
+            $row1 = $stmt->fetch();
+            echo'<script>';
+                echo'window.onload = function(){';
+                echo'document.getElementById("showGroup").innerHTML = ';
+                echo'\''.'<div class="title"><p>專題展示</p></div>'.'\''.'+'.
+                '\''.'<div class="projectPlace"><video src="./assets/video/'.$id.'.mp4"></video></div>'.'\''.'+'.
+                '\''.'<div class="titleIntro"><p>專題介紹</p></div>'.'\''.'+'.
+                '\''.'<div class="subTitle"><p>'.$row1["title"].'</p></div>'.'\''.'+'.
+                '\''.'<div><p class="subTitleText">'.$row1["pIntro"].'</p></div>'.'\'';
+                if($row1["motivation"] != null){
+                    echo'+'.'\''.'<div class="subTitle"><p>製作動機</p></div>'.'\''.'+'.
+                        '\''.'<div><p class="subTitleText">'.$row1["motivation"].'</p></div>'.'\'';
+                }
+                if($row1["feature"] != null){
+                    echo'+'.'\''.'<div class="subTitle"><p>專題特色</p></div>'.'\''.'+'.
+                        '\''.'<div><p class="subTitleText">'.$row1["feature"].'</p></div>'.'\'';
+                }
+                if($row1["mechanism"] != null){
+                    echo'+'.'\''.'<div class="subTitle"><p>專題機制</p></div>'.'\''.'+'.
+                        '\''.'<div><p class="subTitleText">'.$row1["mechanism"].'</p></div>'.'\'';
+                }
+                echo'+'.'\''.'<div class="titleMember"><p>成員分工</p></div>'.'\''.'+';
+                echo'\''.'<div class="slideshow-container" id="slideshow-container"></div>'.'\''.
+                    '+'.'\''.'<a class="prev" id ="prev" onclick="showReduceSlides();">&#10094;</a>'.'\''.
+                    '+'.'\''.'<a class="next" id ="next" onclick="showPlusSlides();">&#10095;</a>'.'\'';
+                echo';';
+                echo'}';
+            echo'</script>';
+        ?-->
     </head>
     <body>
         <!-- Navigation-->
@@ -114,11 +149,12 @@
             $conn->exec("SET NAMES 'utf8';");
             $stmt = $conn->prepare("SELECT * FROM member WHERE groupId = '".$id."'");
             $stmt->execute();
+            
             echo'
                 <script>
                     var page = 1;
                     var w;
-                    
+                    var load = true;
                     function watchChangeSize (){    
                         w = window.innerWidth;
                     }
@@ -128,11 +164,11 @@
                         showSlides(page);
                     }
 
-                    window.onload = function(){
+                    /*window.onload = function(){
                         watchChangeSize();
-                        showSlides(page);
-                    }
-
+                        
+                    }*/
+                    
                     function showSlides(page){
                         console.log("被呼叫");
                         father = document.getElementById("slideshow-container");
@@ -188,7 +224,40 @@
                         echo'++page;if(page > '.count($rows).'){page = 1;}showSlides(page);}';
                         echo'function showReduceSlides() {';
                         echo'--page;if(page < 1){page = '.count($rows).';}showSlides(page);}';
-                                
+
+                        echo'window.onload = function(){';
+                            
+                        echo'document.getElementById("showGroup").innerHTML = ';
+                        echo'\''.'<div class="title"><p>專題展示</p></div>'.'\''.'+'.
+                        '\''.'<div class="projectPlace"><video src="./assets/video/'.$id.'.mp4" control></video></div>'.'\''.'+'.
+                        '\''.'<div class="titleIntro"><p>專題介紹</p></div>'.'\''.'+'.
+                        '\''.'<div class="subTitle"><p>'.$rows["0"]["title"].'</p></div>'.'\''.'+'.
+                        '\''.'<div><p class="subTitleText">'.$rows["0"]["pIntro"].'</p></div>'.'\'';
+                        if($rows["0"]["motivation"] != null){
+                            echo'+'.'\''.'<div class="subTitle"><p>製作動機</p></div>'.'\''.'+'.
+                                '\''.'<div><p class="subTitleText">'.$rows["0"]["motivation"].'</p></div>'.'\'';
+                        }
+                        if($rows["0"]["feature"] != null){
+                            echo'+'.'\''.'<div class="subTitle"><p>專題特色</p></div>'.'\''.'+'.
+                                '\''.'<div><p class="subTitleText">'.$rows["0"]["feature"].'</p></div>'.'\'';
+                        }
+                        if($rows["0"]["mechanism"] != null){
+                            echo'+'.'\''.'<div class="subTitle"><p>專題機制</p></div>'.'\''.'+'.
+                                '\''.'<div><p class="subTitleText">'.$rows["0"]["mechanism"].'</p></div>'.'\'';
+                        }
+                        echo'+'.'\''.'<div class="titleMember"><p>成員分工</p></div>'.'\''.'+';
+                        echo'\''.'<div class="slideshow-container" id="slideshow-container"></div>'.'\''.
+                            '+'.'\''.'<a class="prev" id ="prev" onclick="showReduceSlides();">&#10094;</a>'.'\''.
+                            '+'.'\''.'<a class="next" id ="next" onclick="showPlusSlides();">&#10095;</a>'.'\'';
+                        echo';';
+                        echo'load = true;';
+                        echo'showSlides(page);';
+                        echo'}; '; 
+                        echo'console.log("已載入",load);';
+                        echo'if(load == true){';
+                        
+                        echo'}';
+                        echo'watchChangeSize();';
             echo'</script>';
         ?>
     </body>
