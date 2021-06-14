@@ -267,5 +267,5 @@ function showReduceSlides() {
 }
 
 function send(groupID){
-  location.href="works_member.html?id=" +groupID;
+  location.href="works_member.php?id=" +groupID;
 }

@@ -1,17 +1,5 @@
 <?php
     $id = $_REQUEST["id"];
-    //mysql_query("SET NAMES 'UTF8'");
-    /*$con = mysql_connect("localhost","root","");
-    if (!$con)
-    {
-        die('Could not connect: ' . mysql_error());
-    }
-
-    mysql_select_db("projectintro", $con);
-
-    $result = mysqli_query("SELECT * FROM member WHERE groupId = '".$id."'");
-    $row1 = $result->fetch();*/
-
     $conn = new PDO("mysql:host=localhost;dbname=projectintro","root","");
     $conn->exec("SET NAMES 'utf8';");
     $stmt = $conn->prepare("SELECT * FROM member WHERE groupId = '".$id."'");
