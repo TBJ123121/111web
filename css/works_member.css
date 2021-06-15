@@ -1,6 +1,7 @@
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none; width: 25%; float: left;margin: 4%;}
+.mySlidesG4 {display: none; width: 25%; float: left;margin-left: 12%;margin-right: 12%;}
 img {vertical-align: middle;border:0px solid;border-radius: 50%;}
 img:hover{cursor:default;}
 .slideshow-container {
@@ -127,7 +128,7 @@ img:hover{cursor:default;}
 /*平板*/
 @media only screen and (max-width: 768px) {
   .mySlides {display: none; width: 25%; float: left;margin: 4%;}
-
+  .mySlidesG4 {display: none; width: 25%; float: left;margin-left: 12%;margin-right: 12%;}
 
   
   .prev, .next {
@@ -153,6 +154,7 @@ img:hover{cursor:default;}
 /*手機*/
 @media only screen and (max-width: 576px) {
   .mySlides {display: none; width: 70%; margin-left: 15%;margin-right: 10%;position: relative;}
+  .mySlidesG4 {display: none; width: 70%; margin-left: 15%;margin-right: 10%;position: relative;}
   img {vertical-align: middle;}
 
   p{
