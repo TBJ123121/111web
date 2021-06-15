@@ -14,7 +14,6 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-        <link href="css/works.css" rel="stylesheet" >
         <link href="./css/template.css" rel="stylesheet" />
         <link href="./css/works_member.css" rel="stylesheet" />
         <!--script src="js/showGroup.js"></script-->
@@ -173,13 +172,14 @@
                         console.log("被呼叫");
                         father = document.getElementById("slideshow-container");
                         father.innerHTML = "";
-                        if(w > 768){
+                        if(w > 576){
                             console.log(w);
                             switch(page){';
                                 $rows = $stmt->fetchAll();
                                 for ($num = 1; $num <= count($rows) ; ++$num){
                                     if(count($rows) >= 3){
                                         echo 'case '.$num.':father.innerHTML =';
+                                        //echo'\''.'<a class="prev" id ="prev" onclick="showReduceSlides();">&#10094;</a>'.'\''.'+';
                                         for($i = $num; $i<=$num+2 ; ++$i){
                                             if($i-count($rows) > 0){
                                                 $temp = $i-count($rows);
@@ -191,6 +191,8 @@
                                                 if($i - $num < 2){
                                                     echo'+';
                                                 }else{
+                                                    echo'+'.'\''.'<a class="prev" id ="prev" onclick="showReduceSlides();">&#10094;</a>'.'\'';
+                                                    echo'+'.'\''.'<a class="next" id ="next" onclick="showPlusSlides();">&#10095;</a>'.'\'';
                                                     echo';';
                                                 }
                                             }else{
@@ -202,6 +204,8 @@
                                                 if($i <= $num+1){
                                                     echo'+';
                                                 }else if($i == $num+2){
+                                                    echo'+'.'\''.'<a class="prev" id ="prev" onclick="showReduceSlides();">&#10094;</a>'.'\'';
+                                                    echo'+'.'\''.'<a class="next" id ="next" onclick="showPlusSlides();">&#10095;</a>'.'\'';
                                                     echo';';
                                                 }
                                             }
@@ -209,6 +213,7 @@
                                         echo'break;';
                                     }else{
                                         echo 'case '.$num.':father.innerHTML =';
+                                        //echo'\''.'<a class="prev" id ="prev" onclick="showReduceSlides();">&#10094;</a>'.'\''.'+';
                                         for($i = $num; $i<=$num+1 ; ++$i){
                                             if($i-count($rows) > 0){
                                                 $temp = $i-count($rows);
@@ -218,6 +223,8 @@
                                                 '\''.'<div class="memberIntro"><p class="nameIntro">'.$rows[$temp-1]["mIntro"].'</p></div>'.'\''.'+'.
                                                 '\''.'</div>'.'\'';
                                                 if($i - $num < 2){
+                                                    echo'+'.'\''.'<a class="prev" id ="prev" onclick="showReduceSlides();">&#10094;</a>'.'\'';
+                                                    echo'+'.'\''.'<a class="next" id ="next" onclick="showPlusSlides();">&#10095;</a>'.'\'';
                                                     echo';';
                                                 }
                                             }else{
@@ -229,6 +236,8 @@
                                                 if($i < $num+1){
                                                     echo'+';
                                                 }else if($i == $num+1){
+                                                    echo'+'.'\''.'<a class="prev" id ="prev" onclick="showReduceSlides();">&#10094;</a>'.'\'';
+                                                    echo'+'.'\''.'<a class="next" id ="next" onclick="showPlusSlides();">&#10095;</a>'.'\'';
                                                     echo';';
                                                 }
                                             }
@@ -237,24 +246,30 @@
                                     }
                                 }
                             echo'}}';
-                        echo'else if(w <= 768){console.log(w);switch(page){';
+                        echo'else if(w <= 576){console.log(w);switch(page){';
                         for ($num = 1; $num <= count($rows) ; ++$num){
                             if(count($rows) >= 3){
                                 echo'case '.$num.':father.innerHTML =';
+                                //echo'\''.'<a class="prev" id ="prev" onclick="showReduceSlides();">&#10094;</a>'.'\''.'+';
                                 echo'\''.'<div class="mySlides" id="'.$num.'" style="display:block;">'.'\''.'+'.
                                 '\''.'<img src="./assets/teamMember/team'.$rows[$num-1]["groupId"].'/'.$num.'.jpg" style="width:100%"/>'.'\''.'+'.
                                 '\''.'<div class="memberIntro"><p class="name">'.$rows[$num-1]["name"].'</p></div>'.'\''.'+'.
                                 '\''.'<div class="memberIntro"><p class="nameIntro">'.$rows[$num-1]["mIntro"].'</p></div>'.'\''.'+'.
                                 '\''.'</div>'.'\'';
+                                echo'+'.'\''.'<a class="prev" id ="prev" onclick="showReduceSlides();">&#10094;</a>'.'\'';
+                                echo'+'.'\''.'<a class="next" id ="next" onclick="showPlusSlides();">&#10095;</a>'.'\'';
                                 echo';';
                                 echo'break;';
                             }else{
                                 echo'case '.$num.':father.innerHTML =';
+                                //echo'\''.'<a class="prev" id ="prev" onclick="showReduceSlides();">&#10094;</a>'.'\''.'+';                      
                                 echo'\''.'<div class="mySlides" id="'.$num.'" style="display:block;">'.'\''.'+'.
                                 '\''.'<img src="./assets/teamMember/team'.$rows[$num-1]["groupId"].'/'.$num.'.jpg" style="width:100%"/>'.'\''.'+'.
                                 '\''.'<div class="memberIntro"><p class="name">'.$rows[$num-1]["name"].'</p></div>'.'\''.'+'.
                                 '\''.'<div class="memberIntro"><p class="nameIntro">'.$rows[$num-1]["mIntro"].'</p></div>'.'\''.'+'.
                                 '\''.'</div>'.'\'';
+                                echo'+'.'\''.'<a class="prev" id ="prev" onclick="showReduceSlides();">&#10094;</a>'.'\'';
+                                echo'+'.'\''.'<a class="next" id ="next" onclick="showPlusSlides();">&#10095;</a>'.'\'';
                                 echo';';
                                 echo'break;';
                             }
@@ -286,9 +301,9 @@
                                 '\''.'<div><p class="subTitleText">'.$rows["0"]["mechanism"].'</p></div>'.'\'';
                         }
                         echo'+'.'\''.'<div class="titleMember"><p>成員分工</p></div>'.'\''.'+';
-                        echo'\''.'<div class="slideshow-container" id="slideshow-container"></div>'.'\''.
-                            '+'.'\''.'<a class="prev" id ="prev" onclick="showReduceSlides();">&#10094;</a>'.'\''.
-                            '+'.'\''.'<a class="next" id ="next" onclick="showPlusSlides();">&#10095;</a>'.'\'';
+                        echo'\''.'<div class="slideshow-container" id="slideshow-container"></div>'.'\'';
+                            /*'+'.'\''.'<a class="prev" id ="prev" onclick="showReduceSlides();">&#10094;</a>'.'\''.
+                            '+'.'\''.'<a class="next" id ="next" onclick="showPlusSlides();">&#10095;</a>'.'\'';*/
                         echo';';
                         echo'load = true;';
                         echo'showSlides(page);';

@@ -2,12 +2,12 @@
 body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none; width: 25%; float: left;margin: 4%;}
 img {vertical-align: middle;border:0px solid;border-radius: 50%;}
-
+img:hover{cursor:default;}
 .slideshow-container {
   max-width: 80%;
   position: relative;
   margin: auto;
-  background-color: black;
+
 }
 
 .subTitleText{
@@ -82,10 +82,9 @@ img {vertical-align: middle;border:0px solid;border-radius: 50%;}
 
 .prev, .next {
   cursor: pointer;
-  position: relative;
-  top: 5%;
+  position: absolute;
+  top:100px;
   max-width: 14%;
-  padding: 16px;
   color: aliceblue;
   font-size: 70px;
   transition: 0.6s ease;
@@ -99,11 +98,11 @@ img {vertical-align: middle;border:0px solid;border-radius: 50%;}
 }
 
 .next {
-  right: 1%;
+  right:-70px;
   border-radius: 3px 0 0 3px;
 }
 .prev {
-  right: 90%;
+  left: -70px;
 }
 
 .fade {
@@ -127,27 +126,27 @@ img {vertical-align: middle;border:0px solid;border-radius: 50%;}
 
 /*平板*/
 @media only screen and (max-width: 768px) {
-  .mySlides {display: none; width: 70%; margin-left: 15%;margin-right: 10%;position: relative;}
-  img {vertical-align: middle;}
+  .mySlides {display: none; width: 25%; float: left;margin: 4%;}
+
 
   
   .prev, .next {
     cursor: pointer;
-    position: relative;
-    top: 30%;
-    max-width: 14%
-    padding: 16px;
-    font-size: 50px;
+    position: absolute;
+    top:80px;
+    max-width: 14%;
+    color: aliceblue;
+    font-size: 70px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
   }
   .next {
-    right: -8%;
+    right:-50px;
     border-radius: 3px 0 0 3px;
   }
   .prev {
-    right: 85%;
+    left: -50px;
   }
 
 
@@ -161,20 +160,20 @@ img {vertical-align: middle;border:0px solid;border-radius: 50%;}
   }
   .prev, .next {
     cursor: pointer;
-    position: relative;
-    max-width: 14%
-    padding: 16px;
-    margin-top: 45%;
-    font-size: 50px;
+    position: absolute;
+    top:100px;
+    max-width: 14%;
+    color: aliceblue;
+    font-size: 70px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
   }
   .next {
-    right: 8%;
+    right:-30px;
     border-radius: 3px 0 0 3px;
   }
   .prev {
-    right: 70%;
+    left: -30px;
   }
 }
