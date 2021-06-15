@@ -284,7 +284,7 @@
                             
                         echo'document.getElementById("showGroup").innerHTML = ';
                         echo'\''.'<div class="title"><p>專題展示</p></div>'.'\''.'+'.
-                        '\''.'<div class="projectPlace"><video src="./assets/video/'.$id.'.mp4" control></video></div>'.'\''.'+'.
+                        '\''.'<video src="./assets/video/'.$id.'.mp4" controls></video>'.'\''.'+'.
                         '\''.'<div class="titleIntro"><p>專題介紹</p></div>'.'\''.'+'.
                         '\''.'<div class="subTitle"><p>'.$rows["0"]["title"].'</p></div>'.'\''.'+'.
                         '\''.'<div><p class="subTitleText">'.$rows["0"]["pIntro"].'</p></div>'.'\'';

@@ -4,6 +4,10 @@ body {font-family: Verdana, sans-serif; margin:0}
 .mySlidesG4 {display: none; width: 25%; float: left;margin-left: 12%;margin-right: 12%;}
 img {vertical-align: middle;border:0px solid;border-radius: 50%;}
 img:hover{cursor:default;}
+video {
+  max-width: 100%;
+  height: auto;
+}
 .slideshow-container {
   max-width: 80%;
   position: relative;
