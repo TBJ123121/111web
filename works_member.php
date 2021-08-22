@@ -16,72 +16,34 @@
         <link href="css/styles.css" rel="stylesheet" />
         <link href="./css/works_member.css" rel="stylesheet" />
         <link href="./css/template.css" rel="stylesheet" />
-        <!--script src="js/showGroup.js"></script-->
-        <!--?php
-            $id = $_REQUEST["id"];
-            $conn = new PDO("mysql:host=localhost;dbname=projectintro","root","");
-            $conn->exec("SET NAMES 'utf8';");
-            $stmt = $conn->prepare("SELECT * FROM member WHERE groupId = '".$id."'");
-            $stmt->execute();
-            $row1 = $stmt->fetch();
-            echo'<script>';
-                echo'window.onload = function(){';
-                echo'document.getElementById("showGroup").innerHTML = ';
-                echo'\''.'<div class="title"><p>專題展示</p></div>'.'\''.'+'.
-                '\''.'<div class="projectPlace"><video src="./assets/video/'.$id.'.mp4"></video></div>'.'\''.'+'.
-                '\''.'<div class="titleIntro"><p>專題介紹</p></div>'.'\''.'+'.
-                '\''.'<div class="subTitle"><p>'.$row1["title"].'</p></div>'.'\''.'+'.
-                '\''.'<div><p class="subTitleText">'.$row1["pIntro"].'</p></div>'.'\'';
-                if($row1["motivation"] != null){
-                    echo'+'.'\''.'<div class="subTitle"><p>製作動機</p></div>'.'\''.'+'.
-                        '\''.'<div><p class="subTitleText">'.$row1["motivation"].'</p></div>'.'\'';
-                }
-                if($row1["feature"] != null){
-                    echo'+'.'\''.'<div class="subTitle"><p>專題特色</p></div>'.'\''.'+'.
-                        '\''.'<div><p class="subTitleText">'.$row1["feature"].'</p></div>'.'\'';
-                }
-                if($row1["mechanism"] != null){
-                    echo'+'.'\''.'<div class="subTitle"><p>專題機制</p></div>'.'\''.'+'.
-                        '\''.'<div><p class="subTitleText">'.$row1["mechanism"].'</p></div>'.'\'';
-                }
-                echo'+'.'\''.'<div class="titleMember"><p>成員分工</p></div>'.'\''.'+';
-                echo'\''.'<div class="slideshow-container" id="slideshow-container"></div>'.'\''.
-                    '+'.'\''.'<a class="prev" id ="prev" onclick="showReduceSlides();">&#10094;</a>'.'\''.
-                    '+'.'\''.'<a class="next" id ="next" onclick="showPlusSlides();">&#10095;</a>'.'\'';
-                echo';';
-                echo'}';
-            echo'</script>';
-        ?-->
     </head>
     <body>
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">放icon的地方</a>
+        <nav class="navbar navbar-expand-lg dct-nav">
+            <div class="container dct-nav-container" >
+                <a class="navbar-brand" href="index.html">
+                    <img class="dct-logo" src="./img/logo.png" alt="">
+                </a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
+                    <img class="dct-menu" src="./img/Menu-icon.png" alt="">
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">首頁</a></li>
-                        <li class="nav-item"><a class="nav-link" href="works.html">專題</a></li>
-                        <li class="nav-item"><a class="nav-link" href="team.html">畢籌</a></li>
-                        <li class="nav-item"><a class="nav-link" href="vote.html">投票</a></li>
+                        <li class="nav-item"><a class="nav-link dct-link" href="index.html">首頁</a></li>
+                        <li class="nav-item"><a class="nav-link dct-link" href="works.html">專題作品</a></li>
+                        <li class="nav-item"><a class="nav-link dct-link" href="team.html">策展團隊</a></li>
+                        <li class="nav-item"><a class="nav-link dct-link" href="vote.html">人氣投票</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- Page Header-->
         <header class="masthead">
-            <div class="overlay"></div>
+            <div class="overlay dct-overlay"></div>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-md-10 mx-auto">
-                        <div class="page-heading">
-                          <h1>主視覺動畫放置處</h1>
-<!--                            <span class="subheading">This is what I do.</span>-->
-                        </div>
+                          <video class="dct-video" src="./video/0516動態主視覺.mp4" autoplay muted loop></video>
                     </div>
                 </div>
             </div>
@@ -90,13 +52,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto"  id="showGroup">
-
                 </div>
             </div>
         </div>
         <hr />
         <!-- Footer-->
-        <footer>
+        <footer class="dct-footer">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-md-10 mx-auto">
@@ -130,7 +91,7 @@
                             </li>
 -->
                         </ul>
-                        <p class="copyright text-muted">&copy; 台中教育大學111級數位系</p>
+                        <p class="copyright dct-copyright">&copy; 國立臺中教育大學數位內容科技學系 111級畢籌團隊</p>
                     </div>
                 </div>
             </div>

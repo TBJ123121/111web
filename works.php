@@ -11,8 +11,11 @@
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+        rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/works.css" rel="stylesheet">
@@ -27,7 +30,9 @@
             <a class="navbar-brand" href="index.html">
                 <img class="dct-logo" src="./img/logo.png" alt="">
             </a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <img class="dct-menu" src="./img/Menu-icon.png" alt="">
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -53,13 +58,10 @@
     </header>
     <!-- Main Content-->
     <div class="container">
-        <div class="d-inline-block">
-            <div class="title">
-                <p>專題展示</p>
-            </div>
-
-            <div class="slideshow-container" id="slideshow-container">
-            </div>
+        <div class="row">
+            <div class="title"><p>專題展示</p></div>
+                    
+            <div class="slideshow-container" id="slideshow-container"></div>
             <a class="prev" id ="prev" onclick="showReduceSlides();">&#10094;</a>
             <a class="next" id ="next" onclick="showPlusSlides();">&#10095;</a>
 
@@ -90,18 +92,27 @@
                                 </span>
                             </a>
                         </li>
+                        <!--
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+-->
                     </ul>
                     <p class="copyright dct-copyright">&copy; 國立臺中教育大學數位內容科技學系 111級畢籌團隊</p>
                 </div>
             </div>
-    </footer>
-    <!-- Bootstrap core JS-->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
-    <!--slider-->
-    <script src="js/works.js"></script>
-</body>
-
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!--slider-->
+        <script src="js/works.js"></script>
+    </body>
 </html>
