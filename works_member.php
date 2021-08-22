@@ -14,8 +14,8 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-        <link href="./css/template.css" rel="stylesheet" />
         <link href="./css/works_member.css" rel="stylesheet" />
+        <link href="./css/template.css" rel="stylesheet" />
         <!--script src="js/showGroup.js"></script-->
         <!--?php
             $id = $_REQUEST["id"];
@@ -73,7 +73,7 @@
             </div>
         </nav>
         <!-- Page Header-->
-        <header class="masthead" style="animation: ">
+        <header class="masthead">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row">
