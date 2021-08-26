@@ -14,17 +14,36 @@ body .dct-container .post-container {
   margin-bottom: 100px;
 }
 
+@media (max-width: 992px) {
+  body .dct-container .post-container {
+    display: inline-block !important;
+  }
+}
+
 body .dct-container .post-container .post-pic {
   width: 345px;
-  margin-right: 50px;
+  margin-right: 75px;
+}
+
+@media (max-width: 992px) {
+  body .dct-container .post-container .post-pic {
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 50px;
+  }
 }
 
 body .dct-container .post-container .post-content-container .post-title {
-  letter-spacing: 4px !important;
+  font-size: 18px;
+  letter-spacing: 5px;
+}
+
+body .dct-container .post-container .post-content-container .post-line {
+  border-top: 1px solid #757575;
 }
 
 body .dct-container .post-container .post-content-container post-content {
-  font-size: 12px !important;
-  letter-spacing: 3px !important;
+  font-size: 12px;
+  letter-spacing: 3px;
 }
 /*# sourceMappingURL=index.css.map */
