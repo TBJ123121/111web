@@ -1,0 +1,28 @@
+@font-face {
+    font-family: TaipeiSansTCBeta;
+    src: url("../font/TaipeiSansTCBeta-Regular.ttf") format("opentype");
+}
+html,body{
+    width:100%;
+}
+body{
+    .dct-container{
+        .post-container{
+            display:flex;
+            margin-bottom: 100px;
+            .post-pic{
+                width: 345px;
+                margin-right: 50px;
+            }
+            .post-content-container{
+                .post-title{
+                    letter-spacing: 4px!important;
+                }
+                post-content{
+                    font-size: 12px !important;
+                    letter-spacing: 3px !important;
+                }
+            }
+        }
+    }
+}

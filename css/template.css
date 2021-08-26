@@ -77,6 +77,10 @@ body header .dct-video {
   height: 100%;
 }
 
+body .dct-container {
+  color: #615B5C;
+}
+
 body .dct-footer {
   background-color: #FFFFFF;
 }

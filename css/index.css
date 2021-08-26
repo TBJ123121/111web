@@ -1,0 +1,30 @@
+@font-face {
+  font-family: TaipeiSansTCBeta;
+  src: url("../font/TaipeiSansTCBeta-Regular.ttf") format("opentype");
+}
+
+html, body {
+  width: 100%;
+}
+
+body .dct-container .post-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 100px;
+}
+
+body .dct-container .post-container .post-pic {
+  width: 345px;
+  margin-right: 50px;
+}
+
+body .dct-container .post-container .post-content-container .post-title {
+  letter-spacing: 4px !important;
+}
+
+body .dct-container .post-container .post-content-container post-content {
+  font-size: 12px !important;
+  letter-spacing: 3px !important;
+}
+/*# sourceMappingURL=index.css.map */
