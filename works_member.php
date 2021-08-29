@@ -282,8 +282,8 @@
                         echo'window.onload = function(){';
                             
                         echo'document.getElementById("showGroup").innerHTML = ';
-                        echo'\''.'<div class="title"><p><b>專題展示</b></p></div>'.'\''.'+'.
-                        '\''.'<video src="./assets/video/'.$id.'.mp4" controls></video>'.'\''.'+'.
+                        echo
+                        
                         '\''.'<div class="titleIntro"><p><b>專題介紹</b></p></div>'.'\''.'+'.
                         '\''.'<div class="subTitle"><p>'.$rows["0"]["title"].'</p></div>'.'\''.'+'.
                         '\''.'<div><p class="subTitleText">'.$rows["0"]["pIntro"].'</p></div>'.'\'';
@@ -299,6 +299,8 @@
                             echo'+'.'\''.'<div class="subTitle"><p><b>專題機制</b></p></div>'.'\''.'+'.
                                 '\''.'<div><p class="subTitleText">'.$rows["0"]["mechanism"].'</p></div>'.'\'';
                         }
+                        echo'+'.'\''.'<div class="title"><p><b>專題展示</b></p></div>'.'\''.'+'.
+                            '\''.'<video src="./assets/video/'.$id.'.mp4" controls></video>'.'\'';
                         echo'+'.'\''.'<div class="titleMember"><p><b>成員分工</b></p></div>'.'\''.'+';
                         echo'\''.'<div class="slideshow-container" id="slideshow-container"></div>'.'\'';
                             /*'+'.'\''.'<a class="prev" id ="prev" onclick="showReduceSlides();">&#10094;</a>'.'\''.
