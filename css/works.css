@@ -1,9 +1,13 @@
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none; width: 31.3333333333%; float: left;margin: 1%;}
+.center{width: 41.9999999999%;}
+.aside{width: 26%;}
 img {vertical-align: middle;}
 
 img:hover{cursor: pointer;}
+
+.img-aside{margin-top: 50px;}
 
 .slideshow-container {
   max-width: 72%;
@@ -23,7 +27,7 @@ img:hover{cursor: pointer;}
 .prev, .next {
   cursor: pointer;
   position: relative;
-  top: 15%;
+  top: 21%;
   max-width: 14%
   padding: 16px;
   color: aliceblue;
@@ -69,7 +73,11 @@ img:hover{cursor: pointer;}
 @media only screen and (max-width: 768px) {
   .mySlides {display: none; width: 70%; margin-left: 15%;margin-right: 10%;position: relative;}
   img {vertical-align: middle;}
-
+  .slideshow-container {
+    max-width: 72%;
+    position: relative;
+    margin: auto;
+  }
   
   .prev, .next {
     cursor: pointer;
@@ -95,7 +103,11 @@ img:hover{cursor: pointer;}
 @media only screen and (max-width: 576px) {
   .mySlides {display: none; width: 70%; margin-left: 15%;margin-right: 10%;position: relative;}
   img {vertical-align: middle;}
-
+  .slideshow-container {
+    max-width: 72%;
+    position: relative;
+    margin: auto;
+  }
   p{
     font-size: 25px;
   }
