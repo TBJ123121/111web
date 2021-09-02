@@ -1,23 +1,9 @@
-* {
-  box-sizing: border-box;
-}
-body {
-  font-family: Verdana, sans-serif; 
-  margin:0;
-}
-.mySlides {
-  display: none; 
-  width: 31.3333333333%; 
-  float: left;
-  margin: 1%;
-}
-img {
-  vertical-align: middle;
-}
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none; width: 31.3333333333%; float: left;margin: 1%;}
+img {vertical-align: middle;}
 
-img:hover{
-  cursor: pointer;
-}
+img:hover{cursor: pointer;}
 
 .slideshow-container {
   max-width: 72%;
@@ -37,7 +23,7 @@ img:hover{
 .prev, .next {
   cursor: pointer;
   position: relative;
-  top: 140px;
+  top: 15%;
   max-width: 14%;
   padding: 16px;
   color: #D2A192;
@@ -46,14 +32,10 @@ img:hover{
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
-/* .next{
-  right: 0;
-} */
 
 .prev:hover, .next:hover{
   text-decoration: none;
-  color: #E9C6BB;
-}
+  color: #E9C6BB;}
 
 .next {
   right: -1%;
@@ -106,20 +88,13 @@ img:hover{
   .prev {
     right: 85%;
   }
-
 }
+
 /*手機*/
 @media only screen and (max-width: 576px) {
-  .mySlides {
-    display: none;
-    width: 70%;
-    margin-left: 15%;
-    margin-right: 10%;
-    position: relative;
-  }
-  img {
-    vertical-align: middle;
-  }
+  .mySlides {display: none; width: 70%; margin-left: 15%;margin-right: 10%;position: relative;}
+  img {vertical-align: middle;}
+
   p{
     font-size: 25px;
   }
