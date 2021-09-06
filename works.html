@@ -38,7 +38,7 @@
             </div>
         </nav>
         <!-- Page Header-->
-        <header class="masthead" style="animation: ">
+        <header class="masthead" id="anima" style="animation: ">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row">
@@ -55,11 +55,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto">
-                    <div class="title"><p>專題展示</p></div>
-                    
-                    <div class="slideshow-container" id="slideshow-container"></div>
+                    <div class="title" id="show"><p>專題展示</p></div>
                     <a class="prev" id ="prev" onclick="showReduceSlides();">&#10094;</a>
+                    <div class="slideshow-container" id="slideshow-container"></div>
+                    
                     <a class="next" id ="next" onclick="showPlusSlides();">&#10095;</a>
+                    <div class="aclearfix"></div>
+                    <div class="textshow-container bclearfix" id="textshow-container"></div>
                 </div>
             </div>
         </div>
