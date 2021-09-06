@@ -32,9 +32,20 @@ body .dct-nav .dct-logo {
   height: 65px;
 }
 
+@media (max-width: 992px) {
+  body .dct-nav .dct-logo {
+    height: 35px;
+  }
+}
+
 body .dct-nav .dct-menu {
   width: 80px;
-  height: 80px;
+}
+
+@media (max-width: 992px) {
+  body .dct-nav .dct-menu {
+    width: 40px;
+  }
 }
 
 body .dct-nav .dct-link {
@@ -64,6 +75,7 @@ body .dct-nav .dct-link:hover {
 @media (max-width: 992px) {
   body .dct-nav .dct-link:hover {
     border-radius: 0px;
+    text-align: left;
   }
 }
 
