@@ -1,0 +1,24 @@
+body,
+html {
+    margin: 0;
+}
+body {
+    .previous-container {
+        .previous-ul {
+            list-style: none;
+            .previous-li {
+                .link {
+                    color: #615b5c;
+                    &:hover {
+                        text-decoration: none;
+                        color: #e9c6bb;
+                        transition: ease-in-out 0.25s;
+                    }
+                }
+                @media (max-width: 767px){
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+body,
+html {
+  margin: 0;
+}
+
+body .previous-container .previous-ul {
+  list-style: none;
+}
+
+body .previous-container .previous-ul .previous-li .link {
+  color: #615b5c;
+}
+
+body .previous-container .previous-ul .previous-li .link:hover {
+  text-decoration: none;
+  color: #e9c6bb;
+  -webkit-transition: ease-in-out 0.25s;
+  transition: ease-in-out 0.25s;
+}
+
+@media (max-width: 767px) {
+  body .previous-container .previous-ul .previous-li {
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=previous.css.map */
