@@ -64,6 +64,10 @@ video {
   margin-bottom: 5%;
 }
 
+.titleMemberText{
+  text-align: center;
+}
+
 .title{
   max-width: 72%;
   position: relative;
@@ -81,7 +85,7 @@ video {
 
  p.nameIntro{
   margin:auto;
-  font-size: 25px;
+  font-size: 15px;
   text-align: center;
 }
 
