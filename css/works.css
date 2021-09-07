@@ -70,6 +70,35 @@ img:hover{cursor: pointer;}
   color: transparent;
 }
 
+.textshow-container{
+  max-width: 90%;
+  position: relative;
+  margin: auto;
+}
+.showText{
+  font-size: 15px;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden
+}
+.group{
+  text-align: center;
+}
+
+.aclearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.bclearfix::before {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 0s;
