@@ -245,7 +245,9 @@ function showSlides(page){
           case 1:
             father.innerHTML = 
             '<div class="mySlides aside fade aside-left" id="aside" style="display:block;">'+
+            '<div class="inside-left" style="display:block;">'+
               '<img class="img-aside" style="margin-left: -'+dis+'px;height:'+asideDivHeight+'px;" src="./assets/teamProject/11.jpg" onclick="send(11)"/>'+
+            '</div>'+
             '</div>'+
 
             '<div class="mySlides center" id="center" style="display:block;">'+
@@ -253,7 +255,9 @@ function showSlides(page){
             '</div>'+
 
             '<div class="mySlides aside fade aside-right" id="aside" style="display:block;">'+
+            '<div class="inside-right" style="display:block;">'+
               '<img class="img-aside" style="height:'+asideDivHeight+'px;" src="./assets/teamProject/2.jpg" onclick="send(2)"/>'+
+            '</div>'+
             '</div>';
             father_group.innerHTML = '<h7 class="group">第一組-異辛浣</h7>';
             father_text.innerHTML = 
@@ -265,7 +269,9 @@ function showSlides(page){
           case 2:
             father.innerHTML = 
             '<div class="mySlides aside fade aside-left" id="aside" style="display:block;">'+
+            '<div class="inside-left" style="display:block;">'+
               '<img class="img-aside" src="./assets/teamProject/1.jpg" style="margin-left: -'+dis+'px;height:'+asideDivHeight+'px;" onclick="send(1)"/>'+
+            '</div>'+
             '</div>'+
 
             '<div class="mySlides center" id="center" style="display:block;">'+
@@ -273,7 +279,9 @@ function showSlides(page){
             '</div>'+
 
             '<div class="mySlides aside fade aside-right" id="aside" style="display:block;">'+
+            '<div class="inside-right" style="display:block;">'+
               '<img class="img-aside" src="./assets/teamProject/3.jpg" style="height:'+asideDivHeight+'px;" onclick="send(3)"/>'+
+            '</div>'+
             '</div>';
             father_group.innerHTML = '<h7 class="group">第二組-⚔️Devil Defense</h7>';
             father_text.innerHTML = 
@@ -284,7 +292,9 @@ function showSlides(page){
           case 3:
             father.innerHTML = 
             '<div class="mySlides aside fade aside-left" id="aside" style="display:block;">'+
+            '<div class="inside-left" style="display:block;">'+
               '<img class="img-aside" src="./assets/teamProject/2.jpg" style="margin-left: -'+dis+'px;height:'+asideDivHeight+'px;" onclick="send(2)"/>'+
+            '</div>'+
             '</div>'+
   
             '<div class="mySlides center" id="center" style="display:block;">'+
@@ -292,7 +302,9 @@ function showSlides(page){
             '</div>'+
   
             '<div class="mySlides aside fade aside-right" id="aside" style="display:block;">'+
+            '<div class="inside-right" style="display:block;">'+
               '<img class="img-aside" src="./assets/teamProject/4.jpg" style="height:'+asideDivHeight+'px;" onclick="send(4)"/>'+
+            '</div>'+
             '</div>';
             father_group.innerHTML = '<h7 class="group">第三組-嗑藥山人:尋草求序</h7>';
             father_text.innerHTML = 
@@ -303,7 +315,9 @@ function showSlides(page){
           case 4:
             father.innerHTML = 
             '<div class="mySlides aside fade aside-left" id="aside" style="display:block;">'+
+            '<div class="inside-left" style="display:block;">'+
               '<img class="img-aside" src="./assets/teamProject/3.jpg" style="margin-left: -'+dis+'px;height:'+asideDivHeight+'px;" onclick="send(3)"/>'+
+            '</div>'+
             '</div>'+
   
             '<div class="mySlides center" id="center" style="display:block;">'+
@@ -311,7 +325,9 @@ function showSlides(page){
             '</div>'+
   
             '<div class="mySlides aside fade aside-right" id="aside" style="display:block;">'+
+            '<div class="inside-right" style="display:block;">'+
               '<img class="img-aside" src="./assets/teamProject/5.jpg" style="height:'+asideDivHeight+'px;" onclick="send(5)"/>'+
+            '</div>'+
             '</div>';
             father_group.innerHTML = '<h7 class="group">第四組-越來越不南</h7>';
             father_text.innerHTML = 
@@ -322,7 +338,9 @@ function showSlides(page){
           case 5:
             father.innerHTML = 
             '<div class="mySlides aside fade aside-left" id="aside" style="display:block;">'+
+            '<div class="inside-left" style="display:block;">'+
               '<img class="img-aside" src="./assets/teamProject/4.jpg" style="margin-left: -'+dis+'px;height:'+asideDivHeight+'px;" onclick="send(4)"/>'+
+            '</div>'+
             '</div>'+
   
             '<div class="mySlides center" id="center" style="display:block;">'+
@@ -330,8 +348,10 @@ function showSlides(page){
             '</div>'+
   
             '<div class="mySlides aside fade aside-right" id="aside" style="display:block;">'+
+            '<div class="inside-right" style="display:block;">'+
               '<img class="img-aside" src="./assets/teamProject/6.jpg" style="height:'+asideDivHeight+'px;" onclick="send(6)"/>'+
-            '</div>';  
+            '</div>'+
+            '</div>'; 
             father_group.innerHTML = '<h7 class="group">第五組-LOKAH!農場日誌</h7>'; 
             father_text.innerHTML = 
             '<p class="showText">嗨大家今天過的好嗎? 歡迎來到" LOKAH!農場日誌" lokah!是泰雅族的問候語 每天一句lokah!讓你變成班級交際王 就像寫學習日誌一樣 我們也幫位於象鼻部落的野桐工坊寫了一份農場日誌 裡面記錄著農場的大小事 還有專屬於部落的體驗活動可以報名參加喔! 還在等什麼~ 快來" LOKAH!農場日誌"瞧瞧!!</p>'
@@ -341,7 +361,9 @@ function showSlides(page){
           case 6:
             father.innerHTML = 
             '<div class="mySlides aside fade aside-left" id="aside" style="display:block;">'+
+            '<div class="inside-left" style="display:block;">'+
               '<img class="img-aside" src="./assets/teamProject/5.jpg" style="margin-left: -'+dis+'px;height:'+asideDivHeight+'px;" onclick="send(5)"/>'+
+            '</div>'+
             '</div>'+
   
             '<div class="mySlides center" id="center" style="display:block;">'+
@@ -349,7 +371,9 @@ function showSlides(page){
             '</div>'+
   
             '<div class="mySlides aside fade aside-right" id="aside" style="display:block;">'+
+            '<div class="inside-right" style="display:block;">'+
               '<img class="img-aside" src="./assets/teamProject/7.jpg" style="height:'+asideDivHeight+'px;" onclick="send(7)"/>'+
+            '</div>'+
             '</div>';  
             father_group.innerHTML = '<h7 class="group">第六組-女王的花園</h7>'; 
             father_text.innerHTML = 
@@ -360,7 +384,9 @@ function showSlides(page){
           case 7:
             father.innerHTML = 
             '<div class="mySlides aside fade aside-left" id="aside" style="display:block;">'+
+            '<div class="inside-left" style="display:block;">'+
               '<img class="img-aside" src="./assets/teamProject/6.jpg" style="margin-left: -'+dis+'px;height:'+asideDivHeight+'px;" onclick="send(6)"/>'+
+            '</div>'+
             '</div>'+
   
             '<div class="mySlides center" id="center" style="display:block;">'+
@@ -368,7 +394,9 @@ function showSlides(page){
             '</div>'+
   
             '<div class="mySlides aside fade aside-right" id="aside" style="display:block;">'+
+            '<div class="inside-right" style="display:block;">'+
               '<img class="img-aside" src="./assets/teamProject/8.jpg" style="height:'+asideDivHeight+'px;" onclick="send(8)"/>'+
+            '</div>'+
             '</div>';  
             father_group.innerHTML = '<h7 class="group">第七組-劣蕈城醫</h7>'; 
             father_text.innerHTML = 
@@ -379,7 +407,9 @@ function showSlides(page){
           case 8:
             father.innerHTML = 
             '<div class="mySlides aside fade aside-left" id="aside" style="display:block;">'+
+            '<div class="inside-left" style="display:block;">'+
               '<img class="img-aside" src="./assets/teamProject/7.jpg" style="margin-left: -'+dis+'px;height:'+asideDivHeight+'px;" onclick="send(7)"/>'+
+            '</div>'+
             '</div>'+
   
             '<div class="mySlides center" id="center" style="display:block;">'+
@@ -387,8 +417,10 @@ function showSlides(page){
             '</div>'+
   
             '<div class="mySlides aside fade aside-right" id="aside" style="display:block;">'+
+            '<div class="inside-right" style="display:block;">'+
               '<img class="img-aside" src="./assets/teamProject/9.jpg" style="height:'+asideDivHeight+'px;" onclick="send(9)"/>'+
-            '</div>'; 
+            '</div>'+
+            '</div>';
             father_group.innerHTML = '<h7 class="group">第八組-Tiresias</h7>'; 
             father_text.innerHTML = 
             '<p class="showText">♫♫♫ 你是我的眼 帶我穿越擁擠的人潮 ♫♫♫ 在Tiresias的帶領下安全的過馬路吧~ - 在台灣約有5萬的視障人口，有些路口雖設有警示聲但在台灣並未普及。本專題研究以輔助非全盲的視障者過馬路，在正視於斑馬線的情況下，透過影像辨識行人號誌，獲知其資訊並進一步通知使用者是否可以過馬路，並在行走的過程當中引導使用者不偏移斑馬線，達到更安全的通過馬路。</p>'
@@ -398,7 +430,9 @@ function showSlides(page){
           case 9:
             father.innerHTML = 
             '<div class="mySlides aside fade aside-left" id="aside" style="display:block;">'+
+            '<div class="inside-left" style="display:block;">'+
               '<img class="img-aside" src="./assets/teamProject/8.jpg" style="margin-left: -'+dis+'px;height:'+asideDivHeight+'px;" onclick="send(8)"/>'+
+            '</div>'+
             '</div>'+
   
             '<div class="mySlides center" id="center" style="display:block;">'+
@@ -406,8 +440,10 @@ function showSlides(page){
             '</div>'+
   
             '<div class="mySlides aside fade aside-right" id="aside" style="display:block;">'+
+            '<div class="inside-right" style="display:block;">'+
               '<img class="img-aside" src="./assets/teamProject/10.jpg" style="height:'+asideDivHeight+'px;" onclick="send(10)"/>'+
-            '</div>';  
+            '</div>'+
+            '</div>'; 
             father_group.innerHTML = '<h7 class="group">第九組-紙上談兵</h7>'; 
             father_text.innerHTML = 
             '<p class="showText">玩棋盤遊戲時，討厭等待冗長的思考時間嗎? 玩即時戰略時，卻對資源收集和過久的行軍時間感到厭煩嗎? 那麼就給《紙上談兵》一個帶你快速體驗戰場瞬息萬變的機會吧!</p>'
@@ -417,7 +453,9 @@ function showSlides(page){
           case 10:
             father.innerHTML = 
             '<div class="mySlides aside fade aside-left" id="aside" style="display:block;">'+
+            '<div class="inside-left" style="display:block;">'+
               '<img class="img-aside" src="./assets/teamProject/9.jpg" style="margin-left: -'+dis+'px;height:'+asideDivHeight+'px;" onclick="send(9)"/>'+
+            '</div>'+
             '</div>'+
   
             '<div class="mySlides center" id="center" style="display:block;">'+
@@ -425,8 +463,10 @@ function showSlides(page){
             '</div>'+
   
             '<div class="mySlides aside fade aside-right" id="aside" style="display:block;">'+
+            '<div class="inside-right" style="display:block;">'+
               '<img class="img-aside" src="./assets/teamProject/11.jpg" style="height:'+asideDivHeight+'px;" onclick="send(11)"/>'+
-            '</div>';  
+            '</div>'+
+            '</div>'; 
             father_group.innerHTML = '<h7 class="group">第十組-逐星者</h7>'; 
             father_text.innerHTML = 
             '<p class="showText">宇宙貓貓是一隻可愛的飛行員，在因緣際會下牠認識了從天上殞落的星辰：牡羊座。貓貓為了修好飛行船並將這隻可憐的綿羊送回天上，與牡羊達成協議一同展開了攀爬世界之樹─蓋亞的旅程，一場充滿歡樂與驚奇的冒險就此展開！</p>'
@@ -436,7 +476,9 @@ function showSlides(page){
           case 11:
             father.innerHTML = 
             '<div class="mySlides aside fade aside-left" id="aside" style="display:block;">'+
+            '<div class="inside-left" style="display:block;">'+
               '<img class="img-aside" src="./assets/teamProject/10.jpg" style="margin-left: -'+dis+'px;height:'+asideDivHeight+'px;" onclick="send(10)"/>'+
+            '</div>'+
             '</div>'+
   
             '<div class="mySlides center" id="center" style="display:block;">'+
@@ -444,7 +486,9 @@ function showSlides(page){
             '</div>'+
   
             '<div class="mySlides aside fade aside-right" id="aside" style="display:block;">'+
+            '<div class="inside-right" style="display:block;">'+
               '<img class="img-aside" src="./assets/teamProject/1.jpg" style="height:'+asideDivHeight+'px;" onclick="send(1)"/>'+
+            '</div>'+
             '</div>';  
             father_group.innerHTML = '<h7 class="group">第十一組-營養HOW解</h7>'; 
             father_text.innerHTML = 
