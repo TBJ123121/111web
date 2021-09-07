@@ -1,0 +1,49 @@
+
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+.font-noto{
+  font-family: 'Noto Sans TC', sans-serif;
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale; 
+  font-smooth: auto;
+}
+.container{
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.name{
+    
+    font-size: 20px;
+    line-height: 30px;
+}
+.font-bold {
+    font-weight: 700!important;
+}
+.person{
+  
+}
+.circular-landscape{
+  display:inline-block;
+  position:relative;
+  width: 300px;
+  height: 300px;
+  overflow:hidden;
+  border-radius:50%;
+}
+.circular-landscape img{
+width:auto;
+height:100%;
+margin-left:-15%;
+}
+
+/* .img-style{
+  border-radius: 1.25rem
+
+} */
+
+
+@media screen and (max-width: 768px) {
+  .container {
+
+  }
+}
