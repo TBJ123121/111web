@@ -73,7 +73,7 @@
             </div>
         </nav>
         <!-- Page Header-->
-        <header class="masthead" style="animation: ">
+        <header class="masthead" id="anima" style="animation: ">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row">
@@ -89,6 +89,9 @@
         <!-- Main Content-->
         <div class="container">
             <div class="row">
+                <!--div class="col-lg-8 col-md-10 mx-auto"  id="bg">
+                    <img src="./assets/img/work_member_bg.png"/>
+                </div-->
                 <div class="col-lg-8 col-md-10 mx-auto"  id="showGroup">
 
                 </div>
@@ -154,26 +157,17 @@
                     var page = 1;
                     var w;
                     var load = true;
+                    var mIntroHeightStandard = 22.4;
                     function watchChangeSize (){    
                         w = window.innerWidth;
                     }
-
-                    window.onresize=function(){  
-                        watchChangeSize();
-                        showSlides(page);
-                    }
-
-                    /*window.onload = function(){
-                        watchChangeSize();
-                        
-                    }*/
                     
                     function showSlides(page){
-                        console.log("被呼叫");
+                        console.log("顯示showSlides");
                         father = document.getElementById("slideshow-container");
                         father.innerHTML = "";
-                        if(w > 576){
-                            console.log(w);
+                        
+                            //console.log(w);
                             switch(page){';
                                 $rows = $stmt->fetchAll();
                                 for ($num = 1; $num <= count($rows) ; ++$num){
@@ -184,8 +178,8 @@
                                                 $temp = $i-count($rows);
                                                 echo'\''.'<div class="mySlides" id="'.$temp.'" style="display:block;">'.'\''.'+'.
                                                 '\''.'<img src="./assets/teamMember/team'.$rows[$temp-1]["groupId"].'/'.$temp.'.jpg" style="width:100%"/>'.'\''.'+'.
-                                                '\''.'<div class="memberIntro"><p class="name">'.$rows[$temp-1]["name"].'</p></div>'.'\''.'+'.
-                                                '\''.'<div class="memberIntro"><p class="nameIntro">'.$rows[$temp-1]["mIntro"].'</p></div>'.'\''.'+'.
+                                                '\''.'<div class="memberIntro"><p class="name" id="name">'.$rows[$temp-1]["name"].'</p></div>'.'\''.'+'.
+                                                '\''.'<div class="memberIntro"><p class="nameIntro" id="nameIntro">'.$rows[$temp-1]["mIntro"].'</p></div>'.'\''.'+'.
                                                 '\''.'</div>'.'\'';
                                                 if($i - $num < 2){
                                                     echo'+';
@@ -197,8 +191,8 @@
                                             }else{
                                                 echo'\''.'<div class="mySlides" id="'.$i.'" style="display:block;">'.'\''.'+'.
                                                 '\''.'<img src="./assets/teamMember/team'.$rows[$i-1]["groupId"].'/'.$i.'.jpg" style="width:100%"/>'.'\''.'+'.
-                                                '\''.'<div class="memberIntro"><p class="name">'.$rows[$i-1]["name"].'</p></div>'.'\''.'+'.
-                                                '\''.'<div class="memberIntro"><p class="nameIntro">'.$rows[$i-1]["mIntro"].'</p></div>'.'\''.'+'.
+                                                '\''.'<div class="memberIntro"><p class="name" id="name">'.$rows[$i-1]["name"].'</p></div>'.'\''.'+'.
+                                                '\''.'<div class="memberIntro"><p class="nameIntro" id="nameIntro">'.$rows[$i-1]["mIntro"].'</p></div>'.'\''.'+'.
                                                 '\''.'</div>'.'\'';
                                                 if($i <= $num+1){
                                                     echo'+';
@@ -218,8 +212,8 @@
                                                 $temp = $i-count($rows);
                                                 echo'\''.'<div class="mySlidesG4" id="'.$temp.'" style="display:block;">'.'\''.'+'.
                                                 '\''.'<img src="./assets/teamMember/team'.$rows[$temp-1]["groupId"].'/'.$temp.'.jpg" style="width:100%"/>'.'\''.'+'.
-                                                '\''.'<div class="memberIntro"><p class="name">'.$rows[$temp-1]["name"].'</p></div>'.'\''.'+'.
-                                                '\''.'<div class="memberIntro"><p class="nameIntro">'.$rows[$temp-1]["mIntro"].'</p></div>'.'\''.'+'.
+                                                '\''.'<div class="memberIntro"><p class="name" id="name">'.$rows[$temp-1]["name"].'</p></div>'.'\''.'+'.
+                                                '\''.'<div class="memberIntro"><p class="nameIntro" id="nameIntro">'.$rows[$temp-1]["mIntro"].'</p></div>'.'\''.'+'.
                                                 '\''.'</div>'.'\'';
                                                 if($i - $num < 2){
                                                     echo'+'.'\''.'<a class="prev" id ="prev" onclick="showReduceSlides();">&#10094;</a>'.'\'';
@@ -229,8 +223,8 @@
                                             }else{
                                                 echo'\''.'<div class="mySlidesG4" id="'.$i.'" style="display:block;">'.'\''.'+'.
                                                 '\''.'<img src="./assets/teamMember/team'.$rows[$i-1]["groupId"].'/'.$i.'.jpg" style="width:100%"/>'.'\''.'+'.
-                                                '\''.'<div class="memberIntro"><p class="name">'.$rows[$i-1]["name"].'</p></div>'.'\''.'+'.
-                                                '\''.'<div class="memberIntro"><p class="nameIntro">'.$rows[$i-1]["mIntro"].'</p></div>'.'\''.'+'.
+                                                '\''.'<div class="memberIntro"><p class="name" id="name">'.$rows[$i-1]["name"].'</p></div>'.'\''.'+'.
+                                                '\''.'<div class="memberIntro"><p class="nameIntro" id="nameIntro">'.$rows[$i-1]["mIntro"].'</p></div>'.'\''.'+'.
                                                 '\''.'</div>'.'\'';
                                                 if($i < $num+1){
                                                     echo'+';
@@ -244,70 +238,120 @@
                                         echo'break;';
                                     }
                                 }
-                            echo'}}';
-                        echo'else if(w <= 576){console.log(w);switch(page){';
-                        for ($num = 1; $num <= count($rows) ; ++$num){
-                            if(count($rows) >= 3){
-                                echo'case '.$num.':father.innerHTML =';
-                                //echo'\''.'<a class="prev" id ="prev" onclick="showReduceSlides();">&#10094;</a>'.'\''.'+';
-                                echo'\''.'<div class="mySlides" id="'.$num.'" style="display:block;">'.'\''.'+'.
-                                '\''.'<img src="./assets/teamMember/team'.$rows[$num-1]["groupId"].'/'.$num.'.jpg" style="width:100%"/>'.'\''.'+'.
-                                '\''.'<div class="memberIntro"><p class="name">'.$rows[$num-1]["name"].'</p></div>'.'\''.'+'.
-                                '\''.'<div class="memberIntro"><p class="nameIntro">'.$rows[$num-1]["mIntro"].'</p></div>'.'\''.'+'.
-                                '\''.'</div>'.'\'';
-                                echo'+'.'\''.'<a class="prev" id ="prev" onclick="showReduceSlides();">&#10094;</a>'.'\'';
-                                echo'+'.'\''.'<a class="next" id ="next" onclick="showPlusSlides();">&#10095;</a>'.'\'';
-                                echo';';
-                                echo'break;';
-                            }else{
-                                echo'case '.$num.':father.innerHTML =';
-                                //echo'\''.'<a class="prev" id ="prev" onclick="showReduceSlides();">&#10094;</a>'.'\''.'+';                      
-                                echo'\''.'<div class="mySlidesG4" id="'.$num.'" style="display:block;">'.'\''.'+'.
-                                '\''.'<img src="./assets/teamMember/team'.$rows[$num-1]["groupId"].'/'.$num.'.jpg" style="width:100%"/>'.'\''.'+'.
-                                '\''.'<div class="memberIntro"><p class="name">'.$rows[$num-1]["name"].'</p></div>'.'\''.'+'.
-                                '\''.'<div class="memberIntro"><p class="nameIntro">'.$rows[$num-1]["mIntro"].'</p></div>'.'\''.'+'.
-                                '\''.'</div>'.'\'';
-                                echo'+'.'\''.'<a class="prev" id ="prev" onclick="showReduceSlides();">&#10094;</a>'.'\'';
-                                echo'+'.'\''.'<a class="next" id ="next" onclick="showPlusSlides();">&#10095;</a>'.'\'';
-                                echo';';
-                                echo'break;';
-                            }
-                        }
-                        echo'}}}';
+                            echo'}';
+                        
+                        echo'}';
                         echo'function showPlusSlides() {';
                         echo'++page;if(page > '.count($rows).'){page = 1;}showSlides(page);}';
                         echo'function showReduceSlides() {';
                         echo'--page;if(page < 1){page = '.count($rows).';}showSlides(page);}';
 
-                        echo'window.onload = function(){';
+                        //下面是onresize程式碼
+                        echo'window.onresize = function(){';
+                            echo'watchChangeSize();';
+                            echo'console.log(w);';
+                            //echo'var mIntroHeight = document.getElementById("nameIntro").offsetHeight;';
                             
-                        echo'document.getElementById("showGroup").innerHTML = ';
-                        echo
-                        
-                        '\''.'<div class="titleIntro"><p><b>專題介紹</b></p></div>'.'\''.'+'.
-                        '\''.'<div class="subTitle"><p>'.$rows["0"]["title"].'</p></div>'.'\''.'+'.
-                        '\''.'<div><p class="subTitleText">'.$rows["0"]["pIntro"].'</p></div>'.'\'';
-                        if($rows["0"]["motivation"] != null){
-                            echo'+'.'\''.'<div class="subTitle"><p><b>製作動機</b></p></div>'.'\''.'+'.
-                                '\''.'<div><p class="subTitleText">'.$rows["0"]["motivation"].'</p></div>'.'\'';
-                        }
-                        if($rows["0"]["feature"] != null){
-                            echo'+'.'\''.'<div class="subTitle"><p><b>專題特色</b></p></div>'.'\''.'+'.
-                                '\''.'<div><p class="subTitleText">'.$rows["0"]["feature"].'</p></div>'.'\'';
-                        }
-                        if($rows["0"]["mechanism"] != null){
-                            echo'+'.'\''.'<div class="subTitle"><p><b>專題機制</b></p></div>'.'\''.'+'.
-                                '\''.'<div><p class="subTitleText">'.$rows["0"]["mechanism"].'</p></div>'.'\'';
-                        }
-                        echo'+'.'\''.'<div class="title"><p><b>專題展示</b></p></div>'.'\''.'+'.
-                            '\''.'<video src="./assets/video/'.$id.'.mp4" controls></video>'.'\'';
-                        echo'+'.'\''.'<div class="titleMember"><p><b>成員分工</b></p></div>'.'\''.'+';
-                        echo'\''.'<div class="slideshow-container" id="slideshow-container"></div>'.'\'';
-                            /*'+'.'\''.'<a class="prev" id ="prev" onclick="showReduceSlides();">&#10094;</a>'.'\''.
-                            '+'.'\''.'<a class="next" id ="next" onclick="showPlusSlides();">&#10095;</a>'.'\'';*/
-                        echo';';
-                        echo'load = true;';
-                        echo'showSlides(page);';
+                            //echo'console.log("mIntroHeight:",mIntroHeight);';
+                            //echo'console.log("mIntroHeightStandard:",mIntroHeightStandard);';
+                            //echo'if(mIntroHeight > mIntroHeightStandard){document.getElementById("nameIntro").style.fontSize = document.getElementById("name").style.fontSize - 5;}';
+                            echo'var anima = document.getElementById("anima");';
+                            echo'if(w<=768){';
+                                echo'anima.style.display="none";';
+                                //echo'var nameIntro = document.getElementById("nameIntro");nameIntro.style.position="relative";nameIntro.style.transform="scale(1)";';
+                                //echo'if(w<=576){var nameIntro = document.getElementById("nameIntro");nameIntro.style.position="absolute";nameIntro.style.transform="scale(0.7)";console.log("已縮小");}';
+                                echo'document.getElementById("showGroup").innerHTML = ';
+                                    echo
+                                    
+                                    '\''.'<div class="projectName"><p class="projectName-p">'.$rows["0"]["title"].'</p></div>'.'\''.'+'.
+                                    '\''.'<div><p class="subTitleText">'.$rows["0"]["pIntro"].'</p></div>'.'\'';
+                                    echo'+'.'\''.'<video src="./assets/video/'.$id.'.mp4" controls></video>'.'\'';
+                                    echo'+'.'\''.'<div class="col-lg-8 col-md-10 mx-auto"  id="bg"><img src="./assets/img/work_member_bg.png"/></div>'.'\'';
+
+                                    if($rows["0"]["motivation"] != null){
+                                        echo'+'.'\''.'<div class="subTitle posMovTitle"><p>製作動機</p></div>'.'\''.'+'.
+                                            '\''.'<div><p class="subTitleText posMovTitleText">'.$rows["0"]["motivation"].'</p></div>'.'\'';
+                                    }
+                                    if($rows["0"]["feature"] != null){
+                                        echo'+'.'\''.'<div class="subTitle posFeaTitle"><p>專題特色</p></div>'.'\''.'+'.
+                                            '\''.'<div><p class="subTitleText posFeaTitleText">'.$rows["0"]["feature"].'</p></div>'.'\'';
+                                    }
+                                    if($rows["0"]["mechanism"] != null){
+                                        echo'+'.'\''.'<div class="subTitle posMecTitle"><p>專題機制</p></div>'.'\''.'+'.
+                                            '\''.'<div><p class="subTitleText posMecTitleText">'.$rows["0"]["mechanism"].'</p></div>'.'\'';
+                                    }
+                                    /*echo'+'.'\''.'<div class="title"><p><b>專題展示</b></p></div>'.'\''.'+'.
+                                        '\''.'<video src="./assets/video/'.$id.'.mp4" controls></video>'.'\'';*/
+                                    echo'+'.'\''.'<div class="titleMember"><p>成員分工</p></div>'.'\''.'+';
+                                    echo'\''.'<div class="slideshow-container" id="slideshow-container"></div>'.'\'';
+                                    echo';';
+                                echo'load = true;';
+                                echo'showSlides(page);';
+                            echo'}';
+                        echo'}; '; 
+
+                        //下面是onload程式碼
+                        echo'window.onload = function(){';
+                            echo'watchChangeSize();';
+                            echo'var anima = document.getElementById("anima");';
+                            echo'if(w<=768){';
+                                echo'anima.style.display="none";';
+                                echo'document.getElementById("showGroup").innerHTML = ';
+                                    echo
+                                    
+                                    '\''.'<div class="projectName"><p class="projectName-p">'.$rows["0"]["title"].'</p></div>'.'\''.'+'.
+                                    '\''.'<div><p class="subTitleText">'.$rows["0"]["pIntro"].'</p></div>'.'\'';
+                                    echo'+'.'\''.'<video src="./assets/video/'.$id.'.mp4" controls></video>'.'\'';
+                                    echo'+'.'\''.'<div class="col-lg-8 col-md-10 mx-auto"  id="bg"><img src="./assets/img/work_member_bg.png"/></div>'.'\'';
+
+                                    if($rows["0"]["motivation"] != null){
+                                        echo'+'.'\''.'<div class="subTitle posMovTitle"><p>製作動機</p></div>'.'\''.'+'.
+                                            '\''.'<div><p class="subTitleText posMovTitleText">'.$rows["0"]["motivation"].'</p></div>'.'\'';
+                                    }
+                                    if($rows["0"]["feature"] != null){
+                                        echo'+'.'\''.'<div class="subTitle posFeaTitle"><p>專題特色</p></div>'.'\''.'+'.
+                                            '\''.'<div><p class="subTitleText posFeaTitleText">'.$rows["0"]["feature"].'</p></div>'.'\'';
+                                    }
+                                    if($rows["0"]["mechanism"] != null){
+                                        echo'+'.'\''.'<div class="subTitle posMecTitle"><p>專題機制</p></div>'.'\''.'+'.
+                                            '\''.'<div><p class="subTitleText posMecTitleText">'.$rows["0"]["mechanism"].'</p></div>'.'\'';
+                                    }
+                                    /*echo'+'.'\''.'<div class="title"><p><b>專題展示</b></p></div>'.'\''.'+'.
+                                        '\''.'<video src="./assets/video/'.$id.'.mp4" controls></video>'.'\'';*/
+                                    echo'+'.'\''.'<div class="titleMember"><p>成員分工</p></div>'.'\''.'+';
+                                    echo'\''.'<div class="slideshow-container" id="slideshow-container"></div>'.'\'';
+                                    echo';';
+                                echo'load = true;';
+                                echo'showSlides(page);';
+                            echo'}';
+                            /*echo'if(w<=768){';
+                                echo'document.getElementById("showGroup").innerHTML = ';
+                                    echo
+                                    '\''.'<div class="titleIntro"><p><b>專題介紹</b></p></div>'.'\''.'+'.
+                                    '\''.'<div class="subTitle"><p>'.$rows["0"]["title"].'</p></div>'.'\''.'+'.
+                                    '\''.'<div><p class="subTitleText">'.$rows["0"]["pIntro"].'</p></div>'.'\'';
+                                    echo'+'.'\''.'<div class="title"><p><b>專題展示</b></p></div>'.'\''.'+'.
+                                        '\''.'<video src="./assets/video/'.$id.'.mp4" controls></video>'.'\'';
+                                    if($rows["0"]["motivation"] != null){
+                                        echo'+'.'\''.'<div class="subTitle"><p><b>製作動機</b></p></div>'.'\''.'+'.
+                                            '\''.'<div><p class="subTitleText">'.$rows["0"]["motivation"].'</p></div>'.'\'';
+                                    }
+                                    if($rows["0"]["feature"] != null){
+                                        echo'+'.'\''.'<div class="subTitle"><p><b>專題特色</b></p></div>'.'\''.'+'.
+                                            '\''.'<div><p class="subTitleText">'.$rows["0"]["feature"].'</p></div>'.'\'';
+                                    }
+                                    if($rows["0"]["mechanism"] != null){
+                                        echo'+'.'\''.'<div class="subTitle"><p><b>專題機制</b></p></div>'.'\''.'+'.
+                                            '\''.'<div><p class="subTitleText">'.$rows["0"]["mechanism"].'</p></div>'.'\'';
+                                    }
+                                    echo'+'.'\''.'<div class="title"><p><b>專題展示</b></p></div>'.'\''.'+'.
+                                        '\''.'<video src="./assets/video/'.$id.'.mp4" controls></video>'.'\'';
+                                    echo'+'.'\''.'<div class="titleMember"><p><b>成員分工</b></p></div>'.'\''.'+';
+                                    echo'\''.'<div class="slideshow-container" id="slideshow-container"></div>'.'\'';
+                                    echo';';
+                                echo'load = true;';
+                                echo'showSlides(page);';
+                            echo'}';*/
                         echo'}; '; 
                         echo'console.log("已載入",load);';
                         echo'if(load == true){';
