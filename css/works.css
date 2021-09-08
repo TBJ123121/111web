@@ -51,10 +51,10 @@ img:hover{cursor: pointer;}
   /*right: -84%;*/
   right: -4%;
   border-radius: 3px 0 0 3px;
-  background: -webkit-linear-gradient(right,aliceblue,rgb(234, 205, 211));
-  background: -o-linear-gradient(left,aliceblue,rgb(234, 205, 211));
-  background: -moz-linear-gradient(left,aliceblue,rgb(234, 205, 211));
-  background: linear-gradient(to left,aliceblue,rgb(234, 205, 211));
+  background: -webkit-linear-gradient(left,aliceblue,rgb(234, 205, 211));
+  background: -o-linear-gradient(right,aliceblue,rgb(234, 205, 211));
+  background: -moz-linear-gradient(right,aliceblue,rgb(234, 205, 211));
+  background: linear-gradient(to right,aliceblue,rgb(234, 205, 211));
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
