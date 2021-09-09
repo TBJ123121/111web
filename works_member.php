@@ -250,16 +250,10 @@
                         echo'window.onresize = function(){';
                             echo'watchChangeSize();';
                             echo'console.log(w);';
-                            //echo'var mIntroHeight = document.getElementById("nameIntro").offsetHeight;';
-                            
-                            //echo'console.log("mIntroHeight:",mIntroHeight);';
-                            //echo'console.log("mIntroHeightStandard:",mIntroHeightStandard);';
-                            //echo'if(mIntroHeight > mIntroHeightStandard){document.getElementById("nameIntro").style.fontSize = document.getElementById("name").style.fontSize - 5;}';
+
                             echo'var anima = document.getElementById("anima");';
                             echo'if(w<=768){';
                                 echo'anima.style.display="none";';
-                                //echo'var nameIntro = document.getElementById("nameIntro");nameIntro.style.position="relative";nameIntro.style.transform="scale(1)";';
-                                //echo'if(w<=576){var nameIntro = document.getElementById("nameIntro");nameIntro.style.position="absolute";nameIntro.style.transform="scale(0.7)";console.log("已縮小");}';
                                 echo'document.getElementById("showGroup").innerHTML = ';
                                     echo
                                     
@@ -269,16 +263,16 @@
                                     echo'+'.'\''.'<div class="col-lg-8 col-md-10 mx-auto"  id="bg"><img src="./assets/img/work_member_bg.png"/></div>'.'\'';
 
                                     if($rows["0"]["motivation"] != null){
-                                        echo'+'.'\''.'<div class="subTitle posMovTitle"><p>製作動機</p></div>'.'\''.'+'.
-                                            '\''.'<div><p class="subTitleText posMovTitleText">'.$rows["0"]["motivation"].'</p></div>'.'\'';
+                                        echo'+'.'\''.'<div class="MovTitle"><div class="subTitle posMovTitle" id="MovTitle"><p>製作動機</p></div>'.'\''.'+'.
+                                            '\''.'<div><p class="subTitleText posMovTitleText">'.$rows["0"]["motivation"].'</p></div></div>'.'\'';
                                     }
                                     if($rows["0"]["feature"] != null){
-                                        echo'+'.'\''.'<div class="subTitle posFeaTitle"><p>專題特色</p></div>'.'\''.'+'.
-                                            '\''.'<div><p class="subTitleText posFeaTitleText">'.$rows["0"]["feature"].'</p></div>'.'\'';
+                                        echo'+'.'\''.'<div class="FeaTitle"><div class="subTitle posFeaTitle"><p>專題特色</p></div>'.'\''.'+'.
+                                            '\''.'<div><p class="subTitleText posFeaTitleText">'.$rows["0"]["feature"].'</p></div></div>'.'\'';
                                     }
                                     if($rows["0"]["mechanism"] != null){
-                                        echo'+'.'\''.'<div class="subTitle posMecTitle"><p>專題機制</p></div>'.'\''.'+'.
-                                            '\''.'<div><p class="subTitleText posMecTitleText">'.$rows["0"]["mechanism"].'</p></div>'.'\'';
+                                        echo'+'.'\''.'<div class="MecTitle"><div class="subTitle posMecTitle"><p>專題機制</p></div>'.'\''.'+'.
+                                            '\''.'<div><p class="subTitleText posMecTitleText">'.$rows["0"]["mechanism"].'</p></div></div>'.'\'';
                                     }
                                     /*echo'+'.'\''.'<div class="title"><p><b>專題展示</b></p></div>'.'\''.'+'.
                                         '\''.'<video src="./assets/video/'.$id.'.mp4" controls></video>'.'\'';*/
@@ -293,6 +287,7 @@
                         //下面是onload程式碼
                         echo'window.onload = function(){';
                             echo'watchChangeSize();';
+                            echo'console.log(w);';
                             echo'var anima = document.getElementById("anima");';
                             echo'if(w<=768){';
                                 echo'anima.style.display="none";';
@@ -305,21 +300,23 @@
                                     echo'+'.'\''.'<div class="col-lg-8 col-md-10 mx-auto"  id="bg"><img src="./assets/img/work_member_bg.png"/></div>'.'\'';
 
                                     if($rows["0"]["motivation"] != null){
-                                        echo'+'.'\''.'<div class="subTitle posMovTitle"><p>製作動機</p></div>'.'\''.'+'.
-                                            '\''.'<div><p class="subTitleText posMovTitleText">'.$rows["0"]["motivation"].'</p></div>'.'\'';
+                                        //echo'+'.'\''.'<div class="MovTitle">'.'\'';
+                                        echo'+'.'\''.'<div class="MovTitle"><div class="subTitle posMovTitle"><p>製作動機</p></div>'.'\''.'+'.
+                                            '\''.'<div><p class="subTitleText posMovTitleText">'.$rows["0"]["motivation"].'</p></div></div>'.'\'';
+                                        //echo'+'.'</div>'.'\'';
                                     }
                                     if($rows["0"]["feature"] != null){
-                                        echo'+'.'\''.'<div class="subTitle posFeaTitle"><p>專題特色</p></div>'.'\''.'+'.
-                                            '\''.'<div><p class="subTitleText posFeaTitleText">'.$rows["0"]["feature"].'</p></div>'.'\'';
+                                        echo'+'.'\''.'<div class="FeaTitle"><div class="subTitle posFeaTitle"><p>專題特色</p></div>'.'\''.'+'.
+                                            '\''.'<div><p class="subTitleText posFeaTitleText">'.$rows["0"]["feature"].'</p></div></div>'.'\'';
                                     }
                                     if($rows["0"]["mechanism"] != null){
-                                        echo'+'.'\''.'<div class="subTitle posMecTitle"><p>專題機制</p></div>'.'\''.'+'.
-                                            '\''.'<div><p class="subTitleText posMecTitleText">'.$rows["0"]["mechanism"].'</p></div>'.'\'';
+                                        echo'+'.'\''.'<div class="MecTitle"><div class="subTitle posMecTitle"><p>專題機制</p></div>'.'\''.'+'.
+                                            '\''.'<div><p class="subTitleText posMecTitleText">'.$rows["0"]["mechanism"].'</p></div></div>'.'\'';
                                     }
                                     /*echo'+'.'\''.'<div class="title"><p><b>專題展示</b></p></div>'.'\''.'+'.
                                         '\''.'<video src="./assets/video/'.$id.'.mp4" controls></video>'.'\'';*/
-                                    echo'+'.'\''.'<div class="titleMember"><p>成員分工</p></div>'.'\''.'+';
-                                    echo'\''.'<div class="slideshow-container" id="slideshow-container"></div>'.'\'';
+                                    echo'+'.'\''.'<div class="TitleMember"><div class="titleMember"><p>成員分工</p></div>'.'\''.'+';
+                                    echo'\''.'<div class="slideshow-container" id="slideshow-container"></div></div>'.'\'';
                                     echo';';
                                 echo'load = true;';
                                 echo'showSlides(page);';
