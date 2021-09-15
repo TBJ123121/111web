@@ -140,7 +140,6 @@
                                 for ($num = 1; $num <= count($rows) ; ++$num){
                                     if(count($rows) >= 3){
                                         echo 'case '.$num.':father.innerHTML =';
-                                        //echo'\''.'<a class="prev" id ="prev" onclick="showReduceSlides();">&#10094;</a>'.'\''.'+';
                                         for($i = $num; $i<=$num+2 ; ++$i){
                                             if($i-count($rows) > 0){
                                                 $temp = $i-count($rows);
@@ -244,24 +243,26 @@
                         echo'window.onload = function(){';
                             
                         echo'document.getElementById("showGroup").innerHTML = ';
-                        echo'\''.'<div class="title"><p>專題展示</p></div>'.'\''.'+'.
-                        '\''.'<video src="./assets/video/'.$id.'.mp4" controls></video>'.'\''.'+'.
-                        '\''.'<div class="titleIntro"><p>專題介紹</p></div>'.'\''.'+'.
+                        echo
+                        
+                        '\''.'<div class="titleIntro"><p><b>專題介紹</b></p></div>'.'\''.'+'.
                         '\''.'<div class="subTitle"><p>'.$rows["0"]["title"].'</p></div>'.'\''.'+'.
                         '\''.'<div><p class="subTitleText">'.$rows["0"]["pIntro"].'</p></div>'.'\'';
                         if($rows["0"]["motivation"] != null){
-                            echo'+'.'\''.'<div class="subTitle"><p>製作動機</p></div>'.'\''.'+'.
+                            echo'+'.'\''.'<div class="subTitle"><p><b>製作動機</b></p></div>'.'\''.'+'.
                                 '\''.'<div><p class="subTitleText">'.$rows["0"]["motivation"].'</p></div>'.'\'';
                         }
                         if($rows["0"]["feature"] != null){
-                            echo'+'.'\''.'<div class="subTitle"><p>專題特色</p></div>'.'\''.'+'.
+                            echo'+'.'\''.'<div class="subTitle"><p><b>專題特色</b></p></div>'.'\''.'+'.
                                 '\''.'<div><p class="subTitleText">'.$rows["0"]["feature"].'</p></div>'.'\'';
                         }
                         if($rows["0"]["mechanism"] != null){
-                            echo'+'.'\''.'<div class="subTitle"><p>專題機制</p></div>'.'\''.'+'.
+                            echo'+'.'\''.'<div class="subTitle"><p><b>專題機制</b></p></div>'.'\''.'+'.
                                 '\''.'<div><p class="subTitleText">'.$rows["0"]["mechanism"].'</p></div>'.'\'';
                         }
-                        echo'+'.'\''.'<div class="titleMember"><p>成員分工</p></div>'.'\''.'+';
+                        echo'+'.'\''.'<div class="title"><p><b>專題展示</b></p></div>'.'\''.'+'.
+                            '\''.'<video src="./assets/video/'.$id.'.mp4" controls></video>'.'\'';
+                        echo'+'.'\''.'<div class="titleMember"><p><b>成員分工</b></p></div>'.'\''.'+';
                         echo'\''.'<div class="slideshow-container" id="slideshow-container"></div>'.'\'';
                             /*'+'.'\''.'<a class="prev" id ="prev" onclick="showReduceSlides();">&#10094;</a>'.'\''.
                             '+'.'\''.'<a class="next" id ="next" onclick="showPlusSlides();">&#10095;</a>'.'\'';*/
