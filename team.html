@@ -57,52 +57,170 @@
                 <div class="row">
 
 <!-- 借放註解  1rem 是 16px  1 代表的是 0.25 倍的 rem，2 代表的是 0.5 倍的 rem，3 代表的是 1 倍的 rem，4 代表的是 1.5 倍的 rem，5 代表的是 3 倍的 rem-->
-                    <section class="js-import-data"></section>
-                    <script>
-                        fetch('https://sheets.googleapis.com/v4/spreadsheets/1tLkE8Obpsuwvh8G7G1HcCk7b08eFJB5Zy65Lundq094/values/index?alt=json&key=AIzaSyD7Lbjgf_5hjGQbsWkdwZGeKJNyM_QNowQ')
-                                .then(res => res.json())
-                                .then(res => {
-                                    console.log(res)
-                                })
 
-
-                    </script>
                     <div class="col-12 ">
 						<div class="card border-0">
-                        <div class="section-heading m-3">示範組</div>
-                            <div class="card-group">
-                                <div class="col-md-6 col-12 d-flex flex-column ">
-                                <div class=" mx-auto">
-                                <img class="img-fluid img-style" src="https://drive.google.com/uc?export=view&id=1M_dI6-u5z2xiG365v0IIFiGKNyhQ95Uz" alt="">
-                                </div>
-
-                                <div class="name main mt-2 mb-2 font-bold text-center">TBJ</div>
-                                </div> 
-                                <div class="person col-md-6 col-12">
-                                <img class="img-fluid" src="https://drive.google.com/uc?export=view&id=13j3X5qU9RE8PUF9wfPtBJuy8VT35bwp2" alt="">
-                                <div class="name main mt-2 mb-2 font-bold text-center">梁瑜容</div>
-                                </div>                             
-                            
-                            </div> 
+                        <div class="section-heading m-3">總召</div>
+                                <div class="row js-import-data-1"></div>
+                        </div>
+						<div class="card border-0">
+                        <div class="section-heading m-3">策展組</div>
+                                <div class="row js-import-data-2"></div>
+                        </div>
+						<div class="card border-0">
+                        <div class="section-heading m-3">行政組</div>
+                                <div class="row js-import-data-3"></div>
+                        </div>
+						<div class="card border-0">
+                        <div class="section-heading m-3">企劃組</div>
+                                <div class="row js-import-data-4"></div>
+                        </div>
+						<div class="card border-0">
+                        <div class="section-heading m-3">宣傳組</div>
+                                <div class="row js-import-data-5"></div>
+                        </div>
+						<div class="card border-0">
+                        <div class="section-heading m-3">多媒體組</div>
+                                <div class="row js-import-data-6"></div>
                         </div>
 
-                       
-                        
-                        <div class="section-heading">企劃執行組</div>
-                        <p>介紹</p>
-                        
-                        <div class="section-heading">行政組</div>
-                        <p>介紹</p>
-						<div class="section-heading">宣傳組</div>
-
-
-                        <p>介紹</p>
-						<div class="section-heading">多媒體組</div>
-                        <p>介紹</p>
+                    
                       
                     </div>
                 </div>
             </div>
+                    <script>
+                        fetch('https://sheets.googleapis.com/v4/spreadsheets/1tLkE8Obpsuwvh8G7G1HcCk7b08eFJB5Zy65Lundq094/values/index?alt=json&key=AIzaSyD7Lbjgf_5hjGQbsWkdwZGeKJNyM_QNowQ')
+                            .then(res => res.json())
+                            .then(res => {
+                                console.log(res)
+                                const data = res.values;
+                                data.shift();
+                                console.log(data);
+                                const G1 = data.slice(0,2);
+                                const G2 = data.slice(2,10);
+                                const G3 = data.slice(10,19);
+                                const G4 = data.slice(19,29);
+                                const G5 = data.slice(29,36);
+                                const G6 = data.slice(36,41);
+
+
+
+                                Array.prototype.forEach.call(G1, g => {
+
+                                    let Group = `
+                                                            
+                                                                <div class="col-md-6 col-12 d-flex flex-column ">
+                                                                <div class=" mx-auto">
+                                                                <img class="img-fluid img-style" src="${g[1]}" alt="${g[0]}">
+                                                                </div>
+                                                                <div class="name main mt-2 mb-2 font-bold text-center">${g[0]}</div>
+                                                                </div>
+                                                            `;
+                                    document.querySelector('.js-import-data-1').insertAdjacentHTML('beforeend', Group);
+
+
+
+
+
+                                })
+                                Array.prototype.forEach.call(G2, g => {
+
+                                    let Group = `
+                                                            
+                                                                <div class="col-md-6 col-12 d-flex flex-column ">
+                                                                <div class=" mx-auto">
+                                                                <img class="img-fluid img-style" src="${g[1]}" alt="${g[0]}">
+                                                                </div>
+                                                                <div class="name main mt-2 mb-2 font-bold text-center">${g[0]}</div>
+                                                                </div>
+                                                            `;
+                                    document.querySelector('.js-import-data-2').insertAdjacentHTML('beforeend', Group);
+
+
+
+
+
+                                })
+                                Array.prototype.forEach.call(G3, g => {
+
+                                    let Group = `
+                                                            
+                                                                <div class="col-md-6 col-12 d-flex flex-column ">
+                                                                <div class=" mx-auto">
+                                                                <img class="img-fluid img-style" src="${g[1]}" alt="${g[0]}">
+                                                                </div>
+                                                                <div class="name main mt-2 mb-2 font-bold text-center">${g[0]}</div>
+                                                                </div>
+                                                            `;
+                                    document.querySelector('.js-import-data-3').insertAdjacentHTML('beforeend', Group);
+
+
+
+
+
+                                })
+                                Array.prototype.forEach.call(G4, g => {
+
+                                    let Group = `
+                                                            
+                                                                <div class="col-md-6 col-12 d-flex flex-column ">
+                                                                <div class=" mx-auto">
+                                                                <img class="img-fluid img-style" src="${g[1]}" alt="${g[0]}">
+                                                                </div>
+                                                                <div class="name main mt-2 mb-2 font-bold text-center">${g[0]}</div>
+                                                                </div>
+                                                            `;
+                                    document.querySelector('.js-import-data-4').insertAdjacentHTML('beforeend', Group);
+
+
+
+
+
+                                })
+                                Array.prototype.forEach.call(G5, g => {
+
+                                    let Group = `
+                                                            
+                                                                <div class="col-md-6 col-12 d-flex flex-column ">
+                                                                <div class=" mx-auto">
+                                                                <img class="img-fluid img-style" src="${g[1]}" alt="${g[0]}">
+                                                                </div>
+                                                                <div class="name main mt-2 mb-2 font-bold text-center">${g[0]}</div>
+                                                                </div>
+                                                            `;
+                                    document.querySelector('.js-import-data-5').insertAdjacentHTML('beforeend', Group);
+
+
+
+
+
+                                })
+                                Array.prototype.forEach.call(G6, g => {
+
+                                    let Group = `
+                                                            
+                                                                <div class="col-md-6 col-12 d-flex flex-column ">
+                                                                <div class=" mx-auto">
+                                                                <img class="img-fluid img-style" src="${g[1]}" alt="${g[0]}">
+                                                                </div>
+                                                                <div class="name main mt-2 mb-2 font-bold text-center">${g[0]}</div>
+                                                                </div>
+                                                            `;
+                                    document.querySelector('.js-import-data-6').insertAdjacentHTML('beforeend', Group);
+
+
+
+
+
+                                })
+
+
+
+                            })
+
+
+                    </script>
     
         <hr />
         <!-- Footer-->

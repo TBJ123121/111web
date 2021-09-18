@@ -19,9 +19,7 @@
 .font-bold {
     font-weight: 700!important;
 }
-.person{
-  
-}
+
 .circular-landscape{
   display:inline-block;
   position:relative;
@@ -36,10 +34,13 @@ height:100%;
 margin-left:-15%;
 }
 
-/* .img-style{
-  border-radius: 1.25rem
+.group{
 
-} */
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+
+}
 
 
 @media screen and (max-width: 768px) {
