@@ -149,16 +149,27 @@ video {
   margin-top: 10%;
   margin-bottom: 10%;
 }
-
+button {
+  padding: 0;
+  border: solid;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  /* show a hand cursor on hover; some argue that we
+  should keep the default arrow cursor for buttons */
+  cursor: pointer;
+}
 #btnDownload{
   font-size: large;
   padding: 10px;
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 500px;
-  border-color: black;
+  border-width: 2px;
+  border-color: rgb(254, 209, 209);
   background-color: rgb(255, 232, 232);
 }
+
 
 @-webkit-keyframes fade {
   from {opacity: 1} 
