@@ -144,6 +144,21 @@ video {
   margin-bottom: 5%;
 }
 
+#divDownload{
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+#btnDownload{
+  font-size: large;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 500px;
+  border-color: black;
+  background-color: rgb(255, 232, 232);
+}
 
 @-webkit-keyframes fade {
   from {opacity: 1} 
@@ -244,6 +259,7 @@ video {
   }
   #bg{
     right: 5%;
+    margin-top: 5%;
   }
   
   p.nameIntro{
@@ -292,6 +308,11 @@ video {
     left: 40%;
   }
   
+  #divDownload{
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
 }
 
 
@@ -434,6 +455,11 @@ video {
   }
   .TitleMember{
     
+  }
+  #divDownload{
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
   }
 }
 @media only screen and (max-width: 576px) and (min-width: 398px) {
