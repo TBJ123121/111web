@@ -68,6 +68,7 @@
                         <li class="nav-item"><a class="nav-link" href="works.html">專題</a></li>
                         <li class="nav-item"><a class="nav-link" href="team.html">畢籌</a></li>
                         <li class="nav-item"><a class="nav-link" href="vote.html">投票</a></li>
+                        <li class="nav-item"><a class="nav-link dct-link" href="previous.html">歷屆網站</a></li>
                     </ul>
                 </div>
             </div>
@@ -264,7 +265,7 @@
                                     '\''.'<div><p class="subTitleText">'.$rows["0"]["pIntro"].'</p></div>'.'\'';
                                     echo'+'.'\''.'<video src="./assets/video/'.$id.'.mp4" controls></video>'.'\'';
                                     echo'+'.'\''.'<div class="col-lg-8 col-md-10 mx-auto"  id="bg"><img src="./assets/img/work_member_bg.png"/></div>'.'\'';
-                                    echo'+'.'\''.'<div id="divDownload"><button id="btnDownload" onclick = "downloadPage()">下載連結</button></div>'.'\'';
+                                    echo'+'.'\''.'<div id="divDownload"><button id="btnDownload" onclick = "downloadPage()">作品連結</button></div>'.'\'';
 
                                     if($rows["0"]["motivation"] != null){
                                         echo'+'.'\''.'<div class="MovTitle"><div class="subTitle posMovTitle" id="MovTitle"><p>製作動機</p></div>'.'\''.'+'.
@@ -295,7 +296,7 @@
                                     '\''.'<div class="projectName"><p class="projectName-p">'.$rows["0"]["title"].'</p></div>'.'\''.'+'.
                                     '\''.'<div><p class="subTitleText">'.$rows["0"]["pIntro"].'</p></div>'.'\'';
                                     echo'+'.'\''.'<video src="./assets/video/'.$id.'.mp4" controls></video>'.'\'';
-                                    echo'+'.'\''.'<div id="divDownload"><button id="btnDownload" onclick = "downloadPage()">下載連結</button></div>'.'\'';
+                                    echo'+'.'\''.'<div id="divDownload"><button id="btnDownload" onclick = "downloadPage()">作品連結</button></div>'.'\'';
                                     //echo'+'.'\''.'<div class="col-lg-8 col-md-10 mx-auto"  id="bg" style="display:hidden;"><img src="./assets/img/work_member_bg.png"/></div>'.'\'';//背景圖隱藏
 
                                     if($rows["0"]["motivation"] != null){
@@ -337,7 +338,7 @@
                                     '\''.'<div><p class="subTitleText">'.$rows["0"]["pIntro"].'</p></div>'.'\'';
                                     echo'+'.'\''.'<video src="./assets/video/'.$id.'.mp4" controls></video>'.'\'';
                                     echo'+'.'\''.'<div class="col-lg-8 col-md-10 mx-auto"  id="bg"><img src="./assets/img/work_member_bg.png"/></div>'.'\'';
-                                    echo'+'.'\''.'<div id="divDownload"><button id="btnDownload" onclick = "downloadPage()">下載連結</button></div>'.'\'';
+                                    echo'+'.'\''.'<div id="divDownload"><button id="btnDownload" onclick = "downloadPage()">作品連結</button></div>'.'\'';
 
                                     if($rows["0"]["motivation"] != null){
                                         //echo'+'.'\''.'<div class="MovTitle">'.'\'';
@@ -370,7 +371,7 @@
                                     '\''.'<div class="projectName"><p class="projectName-p">'.$rows["0"]["title"].'</p></div>'.'\''.'+'.
                                     '\''.'<div><p class="subTitleText">'.$rows["0"]["pIntro"].'</p></div>'.'\'';
                                     echo'+'.'\''.'<video src="./assets/video/'.$id.'.mp4" controls></video>'.'\'';
-                                    echo'+'.'\''.'<div id="divDownload"><button id="btnDownload" onclick = "downloadPage()">下載連結</button></div>'.'\'';
+                                    echo'+'.'\''.'<div id="divDownload"><button id="btnDownload" onclick = "downloadPage()">作品連結</button></div>'.'\'';
 
                                     if($rows["0"]["motivation"] != null){
                                         //echo'+'.'\''.'<div class="MovTitle">'.'\'';
@@ -429,7 +430,13 @@
                         echo'}';
                         echo'watchChangeSize();';
                 echo'function downloadPage(){
-                    window.location.href="'.$rows["0"]["download"].'";
+                    var url = "'.$rows["0"]["download"].'";
+                    if (url == ""){
+
+                    }else{
+                        window.location.href=url;
+                    }
+                    
                 }';
             echo'</script>';
         ?>
