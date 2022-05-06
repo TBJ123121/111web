@@ -151,16 +151,14 @@
             $conn->exec("SET NAMES 'utf8';");
             $stmt = $conn->prepare("SELECT * FROM member WHERE groupId = '".$id."'");
             $stmt->execute();
-            
+
             echo'
                 <script>
                     var page = 1;
                     var w;
                     var load = true;
                     var mIntroHeightStandard = 22.4;
-                    function downloadPage(){
-                        window.location.href="https://www.youtube.com/";
-                    }
+
                     function watchChangeSize (){    
                         w = window.innerWidth;
                     }
@@ -430,6 +428,9 @@
                         
                         echo'}';
                         echo'watchChangeSize();';
+                echo'function downloadPage(){
+                    window.location.href="'.$rows["0"]["download"].'";
+                }';
             echo'</script>';
         ?>
     </body>
