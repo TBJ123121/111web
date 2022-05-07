@@ -471,7 +471,7 @@ button {
     text-align: center;
     margin-top: 10%;
     margin-bottom: 10%;
-  }*/
+  }
 }
 @media only screen and (max-width: 576px) and (min-width: 398px) {
   .MovTitle{
@@ -485,4 +485,4 @@ button {
     top: calc(var(--MovTitle) + 20%);
     top: 30%;
   }
-}
+} */
