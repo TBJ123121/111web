@@ -33,6 +33,11 @@
                         <li class="nav-item"><a class="nav-link dct-link" href="works.html">專題作品</a></li>
                         <li class="nav-item"><a class="nav-link dct-link" href="team.html">策展團隊</a></li>
                         <li class="nav-item"><a class="nav-link dct-link" href="vote.html">人氣投票</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="index.html">首頁</a></li>
+                        <li class="nav-item"><a class="nav-link" href="works.html">專題</a></li>
+                        <li class="nav-item"><a class="nav-link" href="team.html">畢籌</a></li>
+                        <li class="nav-item"><a class="nav-link" href="vote.html">投票</a></li> -->
+                        <li class="nav-item"><a class="nav-link dct-link" href="previous.html">歷屆網站</a></li>
                     </ul>
                 </div>
             </div>
@@ -112,13 +117,14 @@
             $conn->exec("SET NAMES 'utf8';");
             $stmt = $conn->prepare("SELECT * FROM member WHERE groupId = '".$id."'");
             $stmt->execute();
-            
+
             echo'
                 <script>
                     var page = 1;
                     var w;
                     var load = true;
                     var mIntroHeightStandard = 22.4;
+
                     function watchChangeSize (){    
                         w = window.innerWidth;
                     }
@@ -224,6 +230,7 @@
                                     '\''.'<div><p class="subTitleText">'.$rows["0"]["pIntro"].'</p></div>'.'\'';
                                     echo'+'.'\''.'<video src="./assets/video/'.$id.'.mp4" controls></video>'.'\'';
                                     echo'+'.'\''.'<div class="col-lg-8 col-md-10 mx-auto"  id="bg"><img src="./assets/img/work_member_bg.png"/></div>'.'\'';
+                                    echo'+'.'\''.'<div id="divDownload"><button id="btnDownload" onclick = "downloadPage()">作品連結</button></div>'.'\'';
 
                                     if($rows["0"]["motivation"] != null){
                                         echo'+'.'\''.'<div class="MovTitle"><div class="subTitle posMovTitle" id="MovTitle"><p>製作動機</p></div>'.'\''.'+'.
@@ -254,6 +261,7 @@
                                     '\''.'<div class="projectName"><p class="projectName-p">'.$rows["0"]["title"].'</p></div>'.'\''.'+'.
                                     '\''.'<div><p class="subTitleText">'.$rows["0"]["pIntro"].'</p></div>'.'\'';
                                     echo'+'.'\''.'<video src="./assets/video/'.$id.'.mp4" controls></video>'.'\'';
+                                    echo'+'.'\''.'<div id="divDownload"><button id="btnDownload" onclick = "downloadPage()">作品連結</button></div>'.'\'';
                                     //echo'+'.'\''.'<div class="col-lg-8 col-md-10 mx-auto"  id="bg" style="display:hidden;"><img src="./assets/img/work_member_bg.png"/></div>'.'\'';//背景圖隱藏
 
                                     if($rows["0"]["motivation"] != null){
@@ -295,6 +303,7 @@
                                     '\''.'<div><p class="subTitleText">'.$rows["0"]["pIntro"].'</p></div>'.'\'';
                                     echo'+'.'\''.'<video src="./assets/video/'.$id.'.mp4" controls></video>'.'\'';
                                     echo'+'.'\''.'<div class="col-lg-8 col-md-10 mx-auto"  id="bg"><img src="./assets/img/work_member_bg.png"/></div>'.'\'';
+                                    echo'+'.'\''.'<div id="divDownload"><button id="btnDownload" onclick = "downloadPage()">作品連結</button></div>'.'\'';
 
                                     if($rows["0"]["motivation"] != null){
                                         //echo'+'.'\''.'<div class="MovTitle">'.'\'';
@@ -327,7 +336,7 @@
                                     '\''.'<div class="projectName"><p class="projectName-p">'.$rows["0"]["title"].'</p></div>'.'\''.'+'.
                                     '\''.'<div><p class="subTitleText">'.$rows["0"]["pIntro"].'</p></div>'.'\'';
                                     echo'+'.'\''.'<video src="./assets/video/'.$id.'.mp4" controls></video>'.'\'';
-                                    //echo'+'.'\''.'<div class="col-lg-8 col-md-10 mx-auto"  id="bg" style="display:hidden;><img src="./assets/img/work_member_bg.png"/></div>'.'\'';//背景圖隱藏
+                                    echo'+'.'\''.'<div id="divDownload"><button id="btnDownload" onclick = "downloadPage()">作品連結</button></div>'.'\'';
 
                                     if($rows["0"]["motivation"] != null){
                                         //echo'+'.'\''.'<div class="MovTitle">'.'\'';
@@ -385,6 +394,15 @@
                         
                         echo'}';
                         echo'watchChangeSize();';
+                echo'function downloadPage(){
+                    var url = "'.$rows["0"]["download"].'";
+                    if (url == ""){
+
+                    }else{
+                        window.location.href=url;
+                    }
+                    
+                }';
             echo'</script>';
         ?>
     </body>

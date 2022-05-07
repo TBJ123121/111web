@@ -144,6 +144,32 @@ video {
   margin-bottom: 5%;
 }
 
+#divDownload{
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+button {
+  padding: 0;
+  border: solid;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  /* show a hand cursor on hover; some argue that we
+  should keep the default arrow cursor for buttons */
+  cursor: pointer;
+}
+#btnDownload{
+  font-size: large;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 500px;
+  border-width: 2px;
+  border-color: rgb(254, 209, 209);
+  background-color: rgb(255, 232, 232);
+}
+
 
 @-webkit-keyframes fade {
   from {opacity: 1} 
@@ -244,6 +270,7 @@ video {
   }
   #bg{
     right: 5%;
+    margin-top: 5%;
   }
   
   p.nameIntro{
@@ -292,6 +319,11 @@ video {
     left: 40%;
   }
   
+  #divDownload{
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
 }
 
 
@@ -434,18 +466,23 @@ video {
   }
   /* .TitleMember{
     
-  } */
+  }
+  #divDownload{
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }*/
 }
 @media only screen and (max-width: 576px) and (min-width: 398px) {
   .MovTitle{
-    /*position: relative;
+    position: relative;
     max-width: 60%;
     left: 40%;
-    top: 6%;*/
+    top: 6%;
     position: absolute;
     max-width: 60%;
     left: 40%;
-    /*top: calc(var(--MovTitle) + 20%);*/
+    top: calc(var(--MovTitle) + 20%);
     top: 30%;
   }
 }
